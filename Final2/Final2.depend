@@ -1,0 +1,107 @@
+# depslib dependency file v1.0
+1532715596 source:c:\eli\utn\practica finales labi\final 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"Producto.h"
+	"ArrayList.h"
+	"vista.h"
+
+1532454372 source:c:\eli\utn\practica finales labi\final 2\tools.c
+	<stdio.h>
+	<stdlib.h>
+
+1532715504 source:c:\eli\utn\practica finales labi\final 2\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"Producto.h"
+	"ArrayList.h"
+
+1532710562 source:c:\eli\utn\practica finales labi\final 2\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1531822730 c:\eli\utn\practica finales labi\final 2\arraylist.h
+
+1532706248 c:\eli\utn\practica finales labi\final 2\archivo.h
+
+1532713609 c:\eli\utn\practica finales labi\final 2\producto.h
+
+1532708589 source:c:\eli\utn\practica finales labi\final 2\producto.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Producto.h"
+
+1532713609 source:c:\eli\utn\practica finales labi\final 2\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Producto.h"
+
+1532715279 c:\eli\utn\practica finales labi\final 2\vista.h
+
+1532713610 source:c:\eli\utn\en el laburo\final 2\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Producto.h"
+
+1531822730 c:\eli\utn\en el laburo\final 2\arraylist.h
+
+1532734691 c:\eli\utn\en el laburo\final 2\producto.h
+
+1532807101 source:c:\eli\utn\en el laburo\final 2\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1532810184 source:c:\eli\utn\en el laburo\final 2\tools.c
+	<stdio.h>
+	<stdlib.h>
+	"Producto.h"
+	"Archivo.h"
+
+1532812719 source:c:\eli\utn\en el laburo\final 2\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"Producto.h"
+	"ArrayList.h"
+
+1532706250 c:\eli\utn\en el laburo\final 2\archivo.h
+
+1532810257 source:c:\eli\utn\en el laburo\final 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Archivo.h"
+	"Producto.h"
+	"ArrayList.h"
+	"vista.h"
+	"Gestion.h"
+
+1532812719 c:\eli\utn\en el laburo\final 2\vista.h
+
+1532810227 c:\eli\utn\en el laburo\final 2\gestion.h
+
+1532811235 source:c:\eli\utn\en el laburo\final 2\gestioin.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"Producto.h"
+	"ArrayList.h"
+	"vista.h"
+
+1532810676 source:c:\eli\utn\en el laburo\final 2\producto.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Producto.h"
+
