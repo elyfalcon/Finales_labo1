@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ArrayList.h"
+#include "Localidades.h"
 
 void vista_ShowMenu(char *opcion);
 void vista_ShowTitulo(char titulo[]);
@@ -12,8 +13,8 @@ void vista_MostrarElementos(ArrayList *this,char *Titulo,int desde, int hasta);
 //void vista_MostrarElementos(ArrayList *this,char *Titulo,int desde, int hasta);
 int vista_MuestraUnElementoLocalidad(eProducto * prod);
 //void vista_MostrarElementosLocalidad(ArrayList *this,char *Titulo,int desde, int hasta);
-int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado);
-
+int al_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado);
+int vista_MuestraElementoLocalidad(eLocalidad * local);
 
 
 

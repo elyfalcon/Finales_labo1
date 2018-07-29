@@ -43,7 +43,7 @@ char* prod_get_localidad(eProducto* this)
 {
     return this->localidad;
 }
-char* get_recibe(eProducto* this)
+char* prod_get_recibe(eProducto* this)
 {
     return this->recibe;
 }
@@ -122,5 +122,15 @@ int prod_ComparaLocalidad2(void* eProductoA,void* eProductoB)
 
         retorno=strcmp( prd_1->localidad,prd_2->localidad );
     }
+    return retorno;
+}
+int prod_compareconLocalidad(void*pLocalidad, char* local)
+{
+    int retorno=0;
+    if (stricmp(((eProducto*)pLocalidad)->localidad,local)==0 )
+    {
+        retorno=1;
+    }
+
     return retorno;
 }

@@ -118,7 +118,7 @@
 
 1532835901 c:\eli\utn\en el laburo\final 2\localidades.h
 
-1532843553 source:c:\eli\utn\finales\finales_labo1\final2\archivo.c
+1532895646 source:c:\eli\utn\finales\finales_labo1\final2\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -128,7 +128,7 @@
 
 1531822730 c:\eli\utn\finales\finales_labo1\final2\arraylist.h
 
-1532838508 c:\eli\utn\finales\finales_labo1\final2\producto.h
+1532893861 c:\eli\utn\finales\finales_labo1\final2\producto.h
 
 1532807101 source:c:\eli\utn\finales\finales_labo1\final2\arraylist.c
 	<stdio.h>
@@ -136,7 +136,7 @@
 	<string.h>
 	"ArrayList.h"
 
-1532845846 source:c:\eli\utn\finales\finales_labo1\final2\gestioin.c
+1532895564 source:c:\eli\utn\finales\finales_labo1\final2\gestioin.c
 	<stdio.h>
 	<stdlib.h>
 	"Archivo.h"
@@ -144,21 +144,23 @@
 	"ArrayList.h"
 	"vista.h"
 	"Localidades.h"
+	"tools.h"
 
 1532843489 c:\eli\utn\finales\finales_labo1\final2\archivo.h
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 
-1532844201 c:\eli\utn\finales\finales_labo1\final2\vista.h
+1532892179 c:\eli\utn\finales\finales_labo1\final2\vista.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
+	"Localidades.h"
 
-1532844511 c:\eli\utn\finales\finales_labo1\final2\localidades.h
+1532888340 c:\eli\utn\finales\finales_labo1\final2\localidades.h
 
-1532845218 source:c:\eli\utn\finales\finales_labo1\final2\main.c
+1532894801 source:c:\eli\utn\finales\finales_labo1\final2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -171,7 +173,7 @@
 
 1532840827 c:\eli\utn\finales\finales_labo1\final2\gestion.h
 
-1532843435 source:c:\eli\utn\finales\finales_labo1\final2\producto.c
+1532895564 source:c:\eli\utn\finales\finales_labo1\final2\producto.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"
@@ -179,24 +181,28 @@
 	"Producto.h"
 	"Localidades.h"
 
-1532810184 source:c:\eli\utn\finales\finales_labo1\final2\tools.c
+1532891398 source:c:\eli\utn\finales\finales_labo1\final2\tools.c
 	<stdio.h>
 	<stdlib.h>
 	"Producto.h"
 	"Archivo.h"
 
-1532844201 source:c:\eli\utn\finales\finales_labo1\final2\vista.c
+1532894762 source:c:\eli\utn\finales\finales_labo1\final2\vista.c
 	<stdio.h>
 	<stdlib.h>
 	"Archivo.h"
 	"Producto.h"
 	"ArrayList.h"
+	"Localidades.h"
 
-1532844798 source:c:\eli\utn\finales\finales_labo1\final2\localidades.c
+1532888340 source:c:\eli\utn\finales\finales_labo1\final2\localidades.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Producto.h"
 	"vista.h"
 	"Localidades.h"
+
+1532841068 c:\eli\utn\finales\finales_labo1\final2\tools.h
+	<string.h>
 

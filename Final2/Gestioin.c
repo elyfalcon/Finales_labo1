@@ -6,6 +6,7 @@
 #include "ArrayList.h"
 #include "vista.h"
 #include "Localidades.h"
+#include "tools.h"
 
 ArrayList* Lista_Localidad(ArrayList* this)
 {
@@ -151,6 +152,7 @@ ArrayList* Gestion_Localidades(ArrayList* this)
 
                 auxlocal=nueva();
                 localidad_set_localidad(auxlocal,localidad);//cargo localidad en Recorset de localidades
+                localidad_set_id(auxlocal,i+1);
                 al_add(ListLocal,auxlocal); //Agrego el recorseet de localidades al ArrayList de localidades
             }//fin 1er for
         }//fin if(ListLocal!=NULL)
@@ -158,3 +160,71 @@ ArrayList* Gestion_Localidades(ArrayList* this)
     return ListLocal;
 }
 
+int gestion_buscarNombre(ArrayList* this, char nom[])
+{
+    int retorno=0;
+    int i;
+    eProducto* emp;
+    if(this!=NULL && nom !=NULL)
+    {
+        if(this->isEmpty(this)==0)
+       {
+        retorno=1;
+    //    if(emp !=NULL)
+    //    {
+            for(i=0;i<this->len(this);i++)
+            {
+            emp=this->get(this,i);
+            if(prod_get_localidad(emp)==nom)
+            {
+                retorno=i;
+                break;
+            }//fin if
+            else if(prod_get_localidad(emp)!=nom)
+            {
+                retorno=-1;
+            }
+            }//fin for
+//        }//fin if(emp)
+        }
+    }//fin if(this!)
+    return retorno;
+}
+
+int gestion_BuscarYGuardar(ArrayList* this,ArrayList* that)
+{
+    int retorno=-1;
+    char nombre[25];
+    int i,cod_prod,id,num_deposito,num;
+    char resp;
+    eProducto* prod;
+    eLocalidad* local;
+    ArrayList* Listreparto;
+
+    if(this !=NULL && that!=NULL)
+    {
+        vista_MostrarElementosLocalidad(that,"LISTADO DE LOCALIDADES",0,that->len(that));
+        num=ingresarInt("\Ingrese Nro que Desea Imprimir", 1, that->len(that));
+        local=al_get(that,num-1);
+        strcpy(nombre,local->localidad );
+        //strcpy(nombre,(al_get(that,(num))) );
+        Listreparto=al_filter3(this,prod_compareconLocalidad,nombre);
+        if(Listreparto !=NULL)
+        {
+         strcat(nombre,".csv");
+          al_MuestraElementos(Listreparto,"REPARTO DE LOCALIDADES",vista_Muestra1UnElemento,0,Listreparto->len(Listreparto),25);
+          GuardarArchivoT(Listreparto,nombre);
+        }
+        else if(Listreparto==NULL)
+        {
+            printf("Lista vacia\n");
+            system("pause");
+        }
+
+    }
+
+
+
+
+
+  }

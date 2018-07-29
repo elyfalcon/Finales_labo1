@@ -4,7 +4,7 @@
 
 typedef struct
 {
-    //int id;
+    int id;
     char localidad[25];
 
 }eLocalidad;

@@ -93,7 +93,7 @@ int parserEstructura(FILE* pFile, ArrayList* this)
     return retorno;
 
 }
-//***********eso no va aca
+//***********Manejo de archivo
 /*
 int data_actualizarArchivo(ArrayList* this,char* nom_archivo)
 {
@@ -203,4 +203,172 @@ int data_borrarProducto(ArrayList* this,ArrayList* that)
     return retorno;
 }
 
+*/
+/*
+int arch_Alta_Empleado(ArrayList* this)
+{
+    int retorno=-1;
+    int i,id;
+    char resp;
+    if(this !=NULL)
+    {
+        eEmpleado* emp;
+        eEmpleado aux;
+        retorno=0;
+        do
+        {
+            tools_ShowTitulo("INGRESO EMPLEADOS");
+            aux.id=tools_siguienteId(this,get_id);
+            ingresarTexto(aux.nombre,20,"Ingrese el nombre: ");
+            ingresarTexto(aux.direccion,25,"Ingrese la direccion: ");
+            aux.horas=ingresarInt("cantidad horas trabajadas",80,200);
+            emp=archivo_nuevoEmp(aux.id,aux.nombre,aux.direccion,aux.horas);
+
+            if(emp !=NULL)
+            {
+                retorno=1;
+                tools_ShowTitulo("Empleado Nuevo:");
+                Muestra1UnElemento(emp);
+                resp=Responder("Confirma el ingreso de este empleado?");
+                if(resp=='N')
+                {
+                    printf("Operacion cancelada\n");
+                    system("pause");
+                }
+                else if(resp=='S')
+                {
+                    this->add(this,emp);
+                    this->sort(this,ComparaNombre,1);
+                }
+
+            }
+
+        }while(Responder("Continua ingresando:")=='S');
+
+    }//fin if(this !=NULL)
+}
+*/
+ArrayList* al_filter3(ArrayList* this, int (*pFunc)(void*, char*), char* localidad)
+{
+    int i;
+    int size=0;
+    int* auxiliar;
+
+    ArrayList*lista;
+    int contador=0;
+
+    if(this!=NULL&& pFunc!=NULL)
+    {
+        lista=al_newArrayList();
+        auxiliar=(void*)malloc(sizeof(int));
+        if (auxiliar !=NULL && lista!=NULL)
+        {
+            for (i=0; i<(this->len(this)); i++)
+            {
+                if(pFunc(*(this->pElements+i), localidad))
+                {
+                    auxiliar=al_get(this, i);
+                    size++;
+                    al_add(lista, auxiliar);
+
+                }
+
+            }
+
+        } //for j
+    }
+
+    return lista;
+}
+int GuardarArchivoT(ArrayList* this, const char* nombre)
+{
+        int retorno=-1;
+        int i;
+        int tamanio=0;
+        if(this!=NULL)
+        {
+            eProducto* emp;
+            FILE *f;
+            f=fopen(nombre, "w");
+            if(f==NULL)
+            {
+                retorno=0;
+            }
+            else
+            {
+                if(emp !=NULL)
+                {
+                    tamanio=al_len(this);
+                    for (i=0; i<tamanio; i++)
+                    {
+                    emp = (eProducto*)al_get(this, i);
+                    fprintf(f,"%d,%s,%s,%s,%s\n",prod_get_id(emp),prod_get_nombre(emp),prod_get_dire(emp),prod_get_localidad(emp),prod_get_recibe(emp));
+                   // fprintf(f,"%d,%s,%s,%d,%d\n",emp->id,emp->nombre,emp->direccion,emp->horas,emp->sueldo);
+                    retorno=1;
+                    }//fin for
+                    }//fin if(aux!=NULL)
+                fclose(f);
+            }//fin else
+        }// fin if(!=null)
+        if(retorno==1)
+        {
+            printf("Se creo el archivo %s correctamente\n",nombre);
+            system("pause");
+        }
+        else
+        {
+            printf("No se pudo crear el archivo %s\n",nombre);
+            system("pause");
+        }
+
+        return retorno;
+
+}
+/*int GuardarArchivoB(ArrayList* this,char nombrearchivo[])
+{
+    int retorno=-1;
+    int i;
+
+    if(this!=NULL)
+    {
+        eProducto* aux;
+        FILE *f;
+
+        f=fopen(nombrearchivo, "wb");
+        if(f==NULL)
+        {
+            retorno=0;
+        }
+        else
+        {
+            int tamanio;
+            tamanio=al_len(this);
+            for (i=0; i<tamanio; i++)
+            {
+                aux = (eEmpleado*)al_get(this, i);
+                fwrite(aux,sizeof(eEmpleado),1,f);
+                retorno=1;
+            }
+            fclose(f);
+        }
+    }
+    return retorno;
+}
+*/
+/*int ComparaEntero(void* eEmpleadoA,void* eEmpleadoB)
+{
+    eEmpleado *retorno;
+   // if (((eEmpleado*)eEmpleadoA)->sueldo >((eEmpleado*)eEmpleadoB)->sueldo)
+    if(get_sueldo(eEmpleadoA)> get_sueldo(eEmpleadoB))
+    {
+      retorno=eEmpleadoA;
+    }
+  //      if (((eEmpleado*)eEmpleadoA)->sueldo <((eEmpleado*)eEmpleadoB)->sueldo)
+  //  {
+     // retorno=eEmpleadoB;
+
+  //  }
+    return retorno;
+
+}
 */

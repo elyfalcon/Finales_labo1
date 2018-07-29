@@ -56,9 +56,12 @@ int main()
                         //vista_MostrarElementos(ListaLocalidades,"LISTADO DE LOCALIDADES",0,ListaLocalidades->len(ListaLocalidades) );
 
                         //al_MuestraElemento_desde_hasta(ListaLocalidades,"LISTADO POR LOCALIDADES",vista_MuestraUnElementoLocalidad ,0,ListaLocalidades->len(ListaLocalidades),100);
-                        vista_MostrarElementosLocalidad(ListAuxiliar,"LISTADO POR LOCALIDADES",0,ListAuxiliar->len(ListAuxiliar));
+                        vista_MostrarElementosLocalidad(ListaLocalidades,"LISTADO POR LOCALIDADES",0,ListAuxiliar->len(ListAuxiliar));
                         system("pause");
                     }
+                    break;
+                case 4:
+                    gestion_BuscarYGuardar(ListaProductos,ListaLocalidades);
                     break;
                 case 0:
                     seguir='N';

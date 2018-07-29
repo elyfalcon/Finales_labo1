@@ -14,6 +14,7 @@ typedef struct
 
 int prod_ComparaLocalidad(void* eEmpleadoA,void* eEmpleadoB);
 int prod_ComparaLocalidad2(void* eProductoA,void* eProductoB);
+int prod_compareconLocalidad(void*pLocalidad, char* local);
 
 
 

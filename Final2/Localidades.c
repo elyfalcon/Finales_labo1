@@ -48,7 +48,7 @@ int localidad_set_localidad(eLocalidad* this, char* localidad)
     return retorno;
 }
 
-/*
+
 int localidad_set_id(eLocalidad* this, int num)
 {
     int retorno = 0;
@@ -59,6 +59,7 @@ int localidad_set_id(eLocalidad* this, int num)
     }
     return retorno;
 }
+/*
 
 int localidad_get_id(eLocalidad* this)
 {
