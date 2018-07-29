@@ -4,6 +4,7 @@
 #include "ArrayList.h"
 #include "Archivo.h"
 #include "Producto.h"
+#include "Localidades.h"
 
 
 eProducto* nuevo(void)
@@ -38,7 +39,7 @@ char* prod_get_dire(eProducto* this)
 {
     return this->direccion;
 }*/
-char* get_localidad(eProducto* this)
+char* prod_get_localidad(eProducto* this)
 {
     return this->localidad;
 }

@@ -4,6 +4,7 @@
 #include "ArrayList.h"
 #include "Archivo.h"
 #include "Producto.h"
+#include "Localidades.h"
 
 
 eProducto* nuevo(void)
@@ -38,7 +39,7 @@ char* prod_get_dire(eProducto* this)
 {
     return this->direccion;
 }*/
-char* get_localidad(eProducto* this)
+char* prod_get_localidad(eProducto* this)
 {
     return this->localidad;
 }
@@ -90,14 +91,14 @@ int prod_ComparaLocalidad(void* eProductoA,void* eProductoB)
     eProducto *prd_1;
     eProducto *prd_2;
 
-    prd_1=(eProducto * ) pElementA;
+    prd_1=(eProducto * ) eProductoA;
+    prd_2=(eProducto * ) eProductoB;
 
-    tmp_2=(ELetra * ) pElementB;
-    if (strcmp(((eProducto*)eProductoA)->localidad,((eProducto*)eProductoB)->localidad)==1)
+    if (strcmp(((eProducto*)prd_1)->localidad,((eProducto*)prd_2)->localidad)==1)
     {
       retorno=1;
     }
-     else if (strcmp(((eProducto*)eProductoA)->localidad,((eProducto*)eProductoB)->localidad)==-1)
+     else if (strcmp(((eProducto*)prd_1)->localidad,((eProducto*)prd_2)->localidad)==-1)
     {
       retorno=-1;
     }

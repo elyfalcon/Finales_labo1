@@ -76,7 +76,7 @@
 
 1532706250 c:\eli\utn\en el laburo\final 2\archivo.h
 
-1532810257 source:c:\eli\utn\en el laburo\final 2\main.c
+1532815011 source:c:\eli\utn\en el laburo\final 2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -85,23 +85,36 @@
 	"ArrayList.h"
 	"vista.h"
 	"Gestion.h"
+	"Localidades.h"
 
-1532812719 c:\eli\utn\en el laburo\final 2\vista.h
+1532816398 c:\eli\utn\en el laburo\final 2\vista.h
 
 1532810227 c:\eli\utn\en el laburo\final 2\gestion.h
 
-1532811235 source:c:\eli\utn\en el laburo\final 2\gestioin.c
+1532825613 source:c:\eli\utn\en el laburo\final 2\gestioin.c
 	<stdio.h>
 	<stdlib.h>
 	"Archivo.h"
 	"Producto.h"
 	"ArrayList.h"
 	"vista.h"
+	"Localidades.h"
 
-1532810676 source:c:\eli\utn\en el laburo\final 2\producto.c
+1532825849 source:c:\eli\utn\en el laburo\final 2\producto.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"
 	"Archivo.h"
 	"Producto.h"
+	"Localidades.h"
+
+1532818387 source:c:\eli\utn\en el laburo\final 2\localidades.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Producto.h"
+	"vista.h"
+	"Localidades.h"
+
+1532818371 c:\eli\utn\en el laburo\final 2\localidades.h
 

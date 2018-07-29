@@ -7,6 +7,7 @@
 #include "ArrayList.h"
 #include "vista.h"
 #include "Gestion.h"
+#include "Localidades.h"
 
 #define NOM_ARCH "DATA_FINAL_V1.csv"
 #define TIENE_ENCABEZADO 1
