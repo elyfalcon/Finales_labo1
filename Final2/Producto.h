@@ -13,6 +13,7 @@ typedef struct
 }eProducto;
 
 int prod_ComparaLocalidad(void* eEmpleadoA,void* eEmpleadoB);
+int prod_ComparaLocalidad2(void* eProductoA,void* eProductoB);
 
 
 

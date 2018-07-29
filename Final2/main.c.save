@@ -23,6 +23,7 @@ int main()
 
     ListaProductos=al_newArrayList();//NO TE OLVIDES LOS PARENTESISSSSS
     ListAuxiliar=al_newArrayList();
+    ListaLocalidades=al_newArrayList();
 
     if(ListaProductos !=NULL)
     {
@@ -42,7 +43,7 @@ int main()
                     break;
                 case 3:
                    // ListAuxiliar=Gestion_Localidades(ListaProductos,prod_ComparaLocalidad);
-                   ListAuxiliar=al_eliminaDuplicados(ListaProductos,prod_ComparaLocalidad()
+                   ListAuxiliar=al_eliminaDuplicados(ListaProductos,prod_ComparaLocalidad2);
                     if(ListAuxiliar !=NULL)
                     {
                         vista_MostrarElementosLocalidad(ListAuxiliar,"LISTADO POR LOCALIDADES",0,ListAuxiliar->len(ListAuxiliar));

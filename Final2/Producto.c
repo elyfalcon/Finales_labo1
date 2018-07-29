@@ -108,4 +108,15 @@ int prod_ComparaLocalidad(void* eProductoA,void* eProductoB)
     }*/
     return retorno;
 }
+int prod_ComparaLocalidad2(void* eProductoA,void* eProductoB)
+{
+    int retorno;
+    eProducto *prd_1;
+    eProducto *prd_2;
 
+    prd_1=(eProducto * ) eProductoA;
+    prd_2=(eProducto * ) eProductoB;
+
+    retorno=strcmp( prd_1->localidad,prd_2->localidad );
+    return retorno;
+}

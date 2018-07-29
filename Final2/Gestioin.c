@@ -40,19 +40,16 @@ ArrayList* Lista_Localidad(ArrayList* this)
 }
 ArrayList* al_eliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
 {
-
     ArrayList* ListAux;
 
     int i,j;
     int cant;
-
 
     if(this!= NULL && pFunc!=NULL )
     {
         ListAux=al_clone(this);
         if(ListAux!=NULL)
         {
-            //cant=ListAux->len(ListAux);
             for(i=0;i < ListAux->len(ListAux)-1 ;i++)
             {
                 for(j=i+1;j<ListAux->len(ListAux);j++)
