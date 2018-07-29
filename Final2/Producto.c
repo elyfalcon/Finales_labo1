@@ -92,7 +92,7 @@ int prod_ComparaLocalidad(void* eProductoA,void* eProductoB)
     eProducto *prd_2;
 
     prd_1=(eProducto * ) eProductoA;
-    prd_2=(eProducto * ) eProductoB;
+   prd_2=(eProducto * ) eProductoB;
 
     if (strcmp(((eProducto*)prd_1)->localidad,((eProducto*)prd_2)->localidad)==1)
     {

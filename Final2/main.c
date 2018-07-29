@@ -19,6 +19,7 @@ int main()
 
     ArrayList *ListaProductos;
     ArrayList *ListAuxiliar;
+    ArrayList *ListaLocalidades;
 
     ListaProductos=al_newArrayList();//NO TE OLVIDES LOS PARENTESISSSSS
     ListAuxiliar=al_newArrayList();
@@ -40,7 +41,8 @@ int main()
                     vista_MostrarElementos(ListaProductos,"LISTADO DE ENTREGAS",0,ListaProductos->len(ListaProductos));
                     break;
                 case 3:
-                    ListAuxiliar=Gestion_Localidades(ListaProductos,prod_ComparaLocalidad);
+                   // ListAuxiliar=Gestion_Localidades(ListaProductos,prod_ComparaLocalidad);
+                   ListAuxiliar=al_eliminaDuplicados(ListaProductos,prod_ComparaLocalidad);
                     if(ListAuxiliar !=NULL)
                     {
                         vista_MostrarElementosLocalidad(ListAuxiliar,"LISTADO POR LOCALIDADES",0,ListAuxiliar->len(ListAuxiliar));

@@ -6,9 +6,7 @@ typedef struct
 {
     int id;
     char localidad[25];
-    char direccion[25];
-    char producto[25];//nombre del producto
-    char recibe[15];
+
 }eLocalidad;
 
 

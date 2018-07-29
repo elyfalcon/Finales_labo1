@@ -38,56 +38,37 @@ ArrayList* Lista_Localidad(ArrayList* this)
     }//fin if(this!=NULL)
     return ListAux;
 }
-ArrayList* Gestion_Localidades(ArrayList* this, int (*pFunc)(void* ,void*))
+ArrayList* al_eliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
 {
-   int returnAux = -1;
-    ArrayList* aux;
-    ArrayList* aux1;
+
     ArrayList* ListAux;
-    ArrayList* ListLocal;
-    eLocalidad *local;
 
     int i,j;
     int cant;
-    eProducto *emp;
 
 
     if(this!= NULL && pFunc!=NULL )
     {
         ListAux=al_clone(this);
-        ListLocal=al_newArrayList();
-        local=nueva;
-
-        if(aux!=NULL)
+        if(ListAux!=NULL)
         {
-            cant=this->len(this);
-            for(i=0;i < cant ;i++)
+            //cant=ListAux->len(ListAux);
+            for(i=0;i < ListAux->len(ListAux)-1 ;i++)
             {
-                aux=(al_get(this,i));
-                for(j=i+1;j<cant-1;j++)
+                for(j=i+1;j<ListAux->len(ListAux);j++)
                 {
-                    aux1=(al_get(this,j));
-
-                    if(pFunc(aux,al_get(this,j))==0)
+                    if(pFunc(al_get(ListAux,i),al_get(ListAux,j)==0))
                     {
-                      al_add(ListLocal,aux);
-                      aux1=this->pop(this,aux1);
-                      local=localidad_set_localidad(prod_get_localidad(aux1));
-                      // al_add(ListAux,al_get(this,i));
-
-                       returnAux=0;
+                      ListAux->pop(ListAux,j);
+                      j=i+1;
                     }//fin if(pfunc)
-                    else if(pFunc(aux,al_get(this,j))!=0)
-                    {
-                      //  local=aux;
-                      //  al_add(ListAux,local);
-                    }
 
-            }//fin 1er for
+                }//fin 1er for
             }//fin 2 for
         }//fin 1er for
     }
-    return ListAux;
+   // return ListAux;
+   return ListAux;
 }
 /*int gestion_quita_duplicados(void* eProductoA,void* eProductoB)
 {
@@ -107,3 +88,33 @@ ArrayList* Gestion_Localidades(ArrayList* this, int (*pFunc)(void* ,void*))
 
 
 }*/
+ArrayList* Gestion_Localidades(ArrayList* this)
+{
+    ArrayList* ListAux;
+    ArrayList* ListLocal;
+    eLocalidad *auxlocal;
+    eProducto *auxprod;
+    char *localidad;
+    int i;
+    int cant;
+    void *aux;
+    void *aux1;
+
+    if(this!= NULL)
+    {
+            cant=this->len(this);
+            for(i=0;i < cant ;i++)
+            {
+                auxlocal=nueva();
+                auxprod=(al_get(this,i));
+                localidad=prod_get_localidad(auxprod);
+                localidad_set_localidad(this,localidad);
+                al_add(ListLocal,auxlocal);
+            }//fin 1er for
+
+        }//fin 1er for
+
+    return ListAux;
+
+}
+

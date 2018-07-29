@@ -32,7 +32,7 @@ int localidad_get_id(eLocalidad* this)
     }
     return num;
 }
-char* localidad_get_producto(eLocalidad* this)
+/*char* localidad_get_producto(eLocalidad* this)
 {
     char* producto = NULL;
     if(this!=NULL)
@@ -71,7 +71,7 @@ int localidad_set_direccion(eLocalidad* this, char* direccion)
         retorno =1;
     }
     return retorno;
-}
+}*/
 
 char* localidad_get_localidad(eLocalidad* this)
 {
@@ -92,7 +92,7 @@ int localidad_set_localidad(eLocalidad* this, char* localidad)
     }
     return retorno;
 }
-char* localidad_get_recibe(eLocalidad* this)
+/*char* localidad_get_recibe(eLocalidad* this)
 {
     char* recibe = NULL;
     if(this!=NULL)
@@ -110,8 +110,8 @@ int localidad_set_recibe(eLocalidad* this, char* recibe)
         retorno =1;
     }
     return retorno;
-}
-eLocalidad* local_nuevaLocal(int id,char nombre[], char producto[],char direccion[],char recibe[])
+}*/
+eLocalidad* local_nuevaLocal(int id,char nombre[])
 {
     eLocalidad* retorno = NULL;
     eLocalidad* pLocal = malloc(sizeof(eLocalidad));
@@ -120,9 +120,7 @@ eLocalidad* local_nuevaLocal(int id,char nombre[], char producto[],char direccio
     {
         localidad_set_id(pLocal,id);
         localidad_set_localidad(pLocal,nombre);
-        localidad_set_producto(pLocal,producto);
-        localidad_set_direccion(pLocal,direccion);
-        localidad_set_recibe(pLocal,recibe);
+
         retorno = pLocal;
     }
     return retorno;
