@@ -12,6 +12,43 @@ eLocalidad* nueva(void)
     returnAux = (eLocalidad*)malloc(sizeof(eLocalidad));
     return returnAux;
 }
+
+eLocalidad* local_nuevaLocal(int id,char nombre[])
+{
+    eLocalidad* retorno = NULL;
+    eLocalidad* pLocal = malloc(sizeof(eLocalidad));
+
+    if(pLocal != NULL)
+    {
+  //      localidad_set_id(pLocal,id);
+        localidad_set_localidad(pLocal,nombre);
+
+        retorno = pLocal;
+    }
+    return retorno;
+}
+
+char* localidad_get_localidad(eLocalidad* this)
+{
+    char* localidad;
+    if(this!=NULL)
+    {
+        strcpy(localidad,this->localidad);
+    }
+    return localidad;
+}
+int localidad_set_localidad(eLocalidad* this, char* localidad)
+{
+    int retorno =0;
+    if(this!=NULL && localidad!=NULL)
+    {
+        strcpy(this->localidad,localidad);
+        retorno =1;
+    }
+    return retorno;
+}
+
+/*
 int localidad_set_id(eLocalidad* this, int num)
 {
     int retorno = 0;
@@ -32,6 +69,7 @@ int localidad_get_id(eLocalidad* this)
     }
     return num;
 }
+*/
 /*char* localidad_get_producto(eLocalidad* this)
 {
     char* producto = NULL;
@@ -73,25 +111,7 @@ int localidad_set_direccion(eLocalidad* this, char* direccion)
     return retorno;
 }*/
 
-char* localidad_get_localidad(eLocalidad* this)
-{
-    char* localidad = NULL;
-    if(this!=NULL)
-    {
-        localidad = this->localidad;
-    }
-    return localidad;
-}
-int localidad_set_localidad(eLocalidad* this, char* localidad)
-{
-    int retorno =0;
-    if(this!=NULL)
-    {
-        strcpy(this->localidad,localidad);
-        retorno =1;
-    }
-    return retorno;
-}
+
 /*char* localidad_get_recibe(eLocalidad* this)
 {
     char* recibe = NULL;
@@ -111,17 +131,5 @@ int localidad_set_recibe(eLocalidad* this, char* recibe)
     }
     return retorno;
 }*/
-eLocalidad* local_nuevaLocal(int id,char nombre[])
-{
-    eLocalidad* retorno = NULL;
-    eLocalidad* pLocal = malloc(sizeof(eLocalidad));
 
-    if(pLocal != NULL)
-    {
-        localidad_set_id(pLocal,id);
-        localidad_set_localidad(pLocal,nombre);
 
-        retorno = pLocal;
-    }
-    return retorno;
-}

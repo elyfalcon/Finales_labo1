@@ -48,6 +48,7 @@ char* get_recibe(eProducto* this)
     return this->recibe;
 }
 
+//  ------ SET -------
 int prod_set_Id(eProducto* this, int dato)
 {
     if(this!=NULL && dato !=NULL)
@@ -109,14 +110,17 @@ int prod_ComparaLocalidad(void* eProductoA,void* eProductoB)
     return retorno;
 }
 int prod_ComparaLocalidad2(void* eProductoA,void* eProductoB)
-{
-    int retorno;
+{//-2 ERROR  y espues el standaroutput de strcmp
+    int retorno=-2;
     eProducto *prd_1;
     eProducto *prd_2;
 
-    prd_1=(eProducto * ) eProductoA;
-    prd_2=(eProducto * ) eProductoB;
+    if(eProductoA!=NULL && eProductoB!=NULL)
+    {
+        prd_1=(eProducto * ) eProductoA;
+        prd_2=(eProducto * ) eProductoB;
 
-    retorno=strcmp( prd_1->localidad,prd_2->localidad );
+        retorno=strcmp( prd_1->localidad,prd_2->localidad );
+    }
     return retorno;
 }

@@ -108,3 +108,75 @@ void vista_MostrarElementosLocalidad(ArrayList *this,char *Titulo,int desde, int
         }
     }
 }
+
+int al_MuestraElemento_desde_hasta(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
+
+{
+
+    int retorno=-1;
+
+    int cont=0;
+
+    if(this!=NULL && Titulo!=NULL)
+
+    {
+
+        retorno=0;
+
+        system("cls");
+
+        printf("\n\n-------- %s --------\n",Titulo);
+
+        if(this->isEmpty(this)==0)
+
+        {//No esta vacio
+
+            for(int index=desde;index<hasta;index++)
+
+            {
+
+                if(cont!=0 && cont %paginado==0)
+
+                {
+
+                    system("pause");
+
+                    system("cls");
+
+                    printf("\n\n-------- %s --------\n",Titulo);
+
+                }
+
+                pFunc(al_get(this,index));
+
+                cont++;
+
+            }
+
+
+
+            if(cont!=0)
+
+            {//pausa la ultima tanda de elementos mostrados
+
+                system("pause");
+
+            }
+
+        }//if(this->isEmpty(this)==0)
+
+        else
+
+        {//o con error o sin datos a mostrar
+
+            printf("\n Sin Datos a Motrar...\n");
+
+            system("pause");
+
+        }
+
+    }//if(this!=NULL && Titulo!=NULL)
+
+    return retorno;
+
+}

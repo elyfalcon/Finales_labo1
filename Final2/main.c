@@ -10,7 +10,7 @@
 #include "Localidades.h"
 
 #define NOM_ARCH "DATA_FINAL_V1.csv"
-#define TIENE_ENCABEZADO 1
+
 
 int main()
 {
@@ -25,7 +25,7 @@ int main()
     ListAuxiliar=al_newArrayList();
     ListaLocalidades=al_newArrayList();
 
-    if(ListaProductos !=NULL)
+    if(ListaProductos !=NULL && ListAuxiliar!=NULL  && ListaLocalidades!=NULL)
     {
         while(seguir=='S')
         {
@@ -40,13 +40,24 @@ int main()
                     break;
                 case 2:
                     vista_MostrarElementos(ListaProductos,"LISTADO DE ENTREGAS",0,ListaProductos->len(ListaProductos));
+                    system("pause");
                     break;
                 case 3:
                    // ListAuxiliar=Gestion_Localidades(ListaProductos,prod_ComparaLocalidad);
-                   ListAuxiliar=al_eliminaDuplicados(ListaProductos,prod_ComparaLocalidad2);
+
+                   ListAuxiliar=al_eliminaDuplicados(ListaProductos,prod_ComparaLocalidad);
+                   printf("len: %d \n",ListAuxiliar->len(ListAuxiliar));
+                   system("pause");
+
+
                     if(ListAuxiliar !=NULL)
                     {
+                        ListaLocalidades=Gestion_Localidades(ListAuxiliar);
+                        //vista_MostrarElementos(ListaLocalidades,"LISTADO DE LOCALIDADES",0,ListaLocalidades->len(ListaLocalidades) );
+
+                        //al_MuestraElemento_desde_hasta(ListaLocalidades,"LISTADO POR LOCALIDADES",vista_MuestraUnElementoLocalidad ,0,ListaLocalidades->len(ListaLocalidades),100);
                         vista_MostrarElementosLocalidad(ListAuxiliar,"LISTADO POR LOCALIDADES",0,ListAuxiliar->len(ListAuxiliar));
+                        system("pause");
                     }
                     break;
                 case 0:

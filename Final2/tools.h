@@ -1,5 +1,6 @@
 #ifndef TOOLS_INCLUDED
 #define TOOLS_INCLUDED
+#include <string.h>
 
 
 

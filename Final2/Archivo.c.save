@@ -4,11 +4,10 @@
 
 #include "ArrayList.h"
 #include "Producto.h"
-#include "Archivo.h"
 
 //#define MASACARA_ARCHIVO "%[^,],%[^,],%[^,],%[^\n]\n"
 
-//#define TIENE_ENCABEZADO 1
+#define TIENE_ENCABEZADO 1
 
 int cargarDesdeArchivo(ArrayList *this,const char* nombre)
 {

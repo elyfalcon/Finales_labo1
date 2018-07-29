@@ -118,11 +118,13 @@
 
 1532835901 c:\eli\utn\en el laburo\final 2\localidades.h
 
-1532713610 source:c:\eli\utn\finales\finales_labo1\final2\archivo.c
+1532843553 source:c:\eli\utn\finales\finales_labo1\final2\archivo.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"ArrayList.h"
 	"Producto.h"
+	"Archivo.h"
 
 1531822730 c:\eli\utn\finales\finales_labo1\final2\arraylist.h
 
@@ -134,7 +136,7 @@
 	<string.h>
 	"ArrayList.h"
 
-1532838038 source:c:\eli\utn\finales\finales_labo1\final2\gestioin.c
+1532845846 source:c:\eli\utn\finales\finales_labo1\final2\gestioin.c
 	<stdio.h>
 	<stdlib.h>
 	"Archivo.h"
@@ -143,13 +145,20 @@
 	"vista.h"
 	"Localidades.h"
 
-1532706250 c:\eli\utn\finales\finales_labo1\final2\archivo.h
+1532843489 c:\eli\utn\finales\finales_labo1\final2\archivo.h
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
 
-1532816398 c:\eli\utn\finales\finales_labo1\final2\vista.h
+1532844201 c:\eli\utn\finales\finales_labo1\final2\vista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
 
-1532835901 c:\eli\utn\finales\finales_labo1\final2\localidades.h
+1532844511 c:\eli\utn\finales\finales_labo1\final2\localidades.h
 
-1532838536 source:c:\eli\utn\finales\finales_labo1\final2\main.c
+1532845218 source:c:\eli\utn\finales\finales_labo1\final2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -160,9 +169,9 @@
 	"Gestion.h"
 	"Localidades.h"
 
-1532835349 c:\eli\utn\finales\finales_labo1\final2\gestion.h
+1532840827 c:\eli\utn\finales\finales_labo1\final2\gestion.h
 
-1532838442 source:c:\eli\utn\finales\finales_labo1\final2\producto.c
+1532843435 source:c:\eli\utn\finales\finales_labo1\final2\producto.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"
@@ -176,14 +185,14 @@
 	"Producto.h"
 	"Archivo.h"
 
-1532812719 source:c:\eli\utn\finales\finales_labo1\final2\vista.c
+1532844201 source:c:\eli\utn\finales\finales_labo1\final2\vista.c
 	<stdio.h>
 	<stdlib.h>
 	"Archivo.h"
 	"Producto.h"
 	"ArrayList.h"
 
-1532835989 source:c:\eli\utn\finales\finales_labo1\final2\localidades.c
+1532844798 source:c:\eli\utn\finales\finales_labo1\final2\localidades.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
