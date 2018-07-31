@@ -26,7 +26,7 @@ eEstru* nuevo_record(void)
 
     return tmp_1->letra;
 }*/
-int est_set_entero(eEstructura* this, int num)
+int est_set_entero(Est1* this, int num)
 {
     int retorno = 0;
     if(this!=NULL)
@@ -37,7 +37,7 @@ int est_set_entero(eEstructura* this, int num)
     return retorno;
 }
 
-int est_get_entero(eEstructura* this)
+int est_get_entero(Est1* this)
 {
     int num;
     if(this!=NULL)
@@ -48,7 +48,7 @@ int est_get_entero(eEstructura* this)
 }
 
 
-char* est_get_texto(eEstructura* this)
+char* est_get_texto(Est1* this)
 {
     char* texto = NULL;
     if(this!=NULL)
@@ -58,7 +58,7 @@ char* est_get_texto(eEstructura* this)
     return texto;
 }
 
-int est_set_texto(eEstructura* this, char* texto)
+int est_set_texto(Est1* this, char* texto)
 {
     int retorno =0;
     if(this!=NULL)
@@ -69,7 +69,7 @@ int est_set_texto(eEstructura* this, char* texto)
     return retorno;
 }
 
-int est_set_flotante(eEstructura* this, float flotante)
+int est_set_flotante(Est1* this, float flotante)
 {
     int retorno =0;
     if(this!=NULL)
@@ -80,7 +80,7 @@ int est_set_flotante(eEstructura* this, float flotante)
     return retorno;
 }
 
-float est_get_flotante(eEstructura* this)
+float est_get_flotante(Est1* this)
 {
     float flotante;
     if(this!=NULL)
@@ -90,7 +90,7 @@ float est_get_flotante(eEstructura* this)
     return flotante;
 }
 
-int est_set_largo(eEstructura* this,long int largo)
+int est_set_largo(Est1* this,long int largo)
 {
     int retorno =0;
     if(this!=NULL)
@@ -101,7 +101,7 @@ int est_set_largo(eEstructura* this,long int largo)
     return retorno;
 }
 
-long int est_get_largo(eEstructura* this)
+long int est_get_largo(Est1* this)
 {
     long int largo;
     if(this!=NULL)

@@ -21,15 +21,6 @@ int gestion_Recorre_ArrayList(ArrayList *this,int (*pFunc)(void*));
  * \param ArrayList
  * \param int elemento a buscar
  * \return int posicion del valor buscado
- */
+ */     
 
 int gestion_buscarId(ArrayList* this, int cod);
-
-/** \brief Mueve un elemento seleccionado de un ArrayList a otro
- *
- * \param ArrayList origen
- * \param ArrayList destino
- * \param id del elemento a mover
- * \return 1 si ok
- */
-int gestion_mover_elemento(ArrayList* this,ArrayList* that,int id);

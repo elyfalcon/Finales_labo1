@@ -54,7 +54,7 @@ int est_Existe_elementos(ArrayList* this ,char * cadLetras);
  * \param int 1 si busca maximo o 0 si es minimo
  * \return eEstructura* BuscaMaximo(ArrayList* this, int
  *
- */
+ */                                        
 eEstructura* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
 
 
