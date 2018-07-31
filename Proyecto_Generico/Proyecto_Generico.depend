@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1533035470 source:c:\eli\utn\casa\proyecto_generico\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1532974467 c:\eli\utn\casa\proyecto_generico\arraylist.h
+
+1533057321 source:c:\eli\utn\casa\proyecto_generico\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Tools.h"
+	"Vista.h"
+
+1533056841 source:c:\eli\utn\casa\proyecto_generico\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1533056841 source:c:\eli\utn\casa\proyecto_generico\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Vista.h"
+
+1533055125 source:c:\eli\utn\casa\proyecto_generico\estructura.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533056840 source:c:\eli\utn\casa\proyecto_generico\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+
+1533056841 source:c:\eli\utn\casa\proyecto_generico\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1533059106 c:\eli\utn\casa\proyecto_generico\estructura.h
+
+1533057280 c:\eli\utn\casa\proyecto_generico\gestion.h
+
+1533056841 c:\eli\utn\casa\proyecto_generico\tools.h
+
+1533054160 c:\eli\utn\casa\proyecto_generico\vista.h
+
+1533053818 c:\eli\utn\casa\proyecto_generico\archivo.h
+
