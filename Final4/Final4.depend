@@ -159,7 +159,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533158196 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
+1533160897 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -177,7 +177,7 @@
 
 1533159013 c:\eli\utn\finales\finales_labo1\final4\tools.h
 
-1533054162 c:\eli\utn\finales\finales_labo1\final4\vista.h
+1533166727 c:\eli\utn\finales\finales_labo1\final4\vista.h
 
 1533059108 source:c:\eli\utn\finales\finales_labo1\final4\arraylist.c
 	<stdio.h>
@@ -196,7 +196,7 @@
 	"Vista.h"
 	"Estructura.h"
 
-1533053820 c:\eli\utn\finales\finales_labo1\final4\archivo.h
+1533161143 c:\eli\utn\finales\finales_labo1\final4\archivo.h
 
 1533126232 source:c:\eli\utn\finales\finales_labo1\final4\gestion.c
 	<stdio.h>
@@ -208,7 +208,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533158666 source:c:\eli\utn\finales\finales_labo1\final4\main.c
+1533166988 source:c:\eli\utn\finales\finales_labo1\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -219,7 +219,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533156542 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
+1533164047 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -228,4 +228,14 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Tools.h"
+
+1533159013 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Vista.h"
 

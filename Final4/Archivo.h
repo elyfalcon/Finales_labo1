@@ -14,7 +14,7 @@
  * \return 1 si el archivo se pudo abrir,0 si no se pudo abrir
  *
  */
-int cargarDesdeArchivo(ArrayList *this,const char* nombre);
+int cargarDesdeArchivo(ArrayList *this,const char* nombre,int (*pFunc)(void*));
 
 /** \brief hace el parser del archivo y lo guarda en la estructura
  *
@@ -33,3 +33,5 @@ int parserEstructura(FILE* pFile, ArrayList* this);
  *
  */
 int GuardarArchivoT(ArrayList* this, const char* nombre);
+
+int parserEstructuraUsuario(FILE* pFile, ArrayList* this);

@@ -53,3 +53,6 @@ int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int
  * \return variable con el texto ingresado
  */
 void vista_ingresarTexto (char texto[], int cantTexto, char pregunta[]);
+
+
+int vista_MuestraUnElementoUsuario(void * record);

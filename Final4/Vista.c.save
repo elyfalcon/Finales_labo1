@@ -38,7 +38,7 @@ int vista_MuestraUnElemento(eMensajes * record)
     if(record !=NULL)
     {
         retorno=0;
-        printf(MASCARA_IMPRIMIR,est_get_idmensaje(record),est_get_idUsuario(record),est_get_popu(record),est_get_texto(record));//definir una mascara
+        printf(MASCARA_IMPRIMIR,est_get_idmensaje(record),est_get_popu(record),est_get_texto(record));//definir una mascara
     }
     return retorno;
 }
@@ -49,7 +49,7 @@ int vista_MuestraUnElementoUsuario(void * record)
     if(record !=NULL)
     {
         retorno=0;
-        printf(MASCARA_IMPRIMIR2,est_get_idUsu(record),est_get_nick(record),est_get_popu_Usu(record));//definir una mascara
+        printf(MASCARA_IMPRIMIR2,est_set_idUsu(record),est_get_nick(record),est_get_popu_Usu(record));//definir una mascara
     }
     return retorno;
 }

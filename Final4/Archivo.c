@@ -13,7 +13,7 @@
 #define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^\n]\n" //defino la mascara para los usuarios
 #define TIENE_ENCABEZADO 1
 
-int cargarDesdeArchivo(ArrayList *this,const char* nombre)
+int cargarDesdeArchivo(ArrayList *this,const char* nombre,int (*pFunc)(void*))
 {
 	int flag = 0;
 	FILE *pArchivo;
@@ -51,7 +51,7 @@ int parserEstructura(FILE* pFile, ArrayList* this)
     int retorno = -1;
     int cantidadFilasLeidas = 0;
     int guardoDato;
-    void* record;
+    eMensajes* record;
 //    int cantidadDatosLeidos;
     char cabecera[50];
     char id[50];
@@ -80,6 +80,57 @@ int parserEstructura(FILE* pFile, ArrayList* this)
                     est_set_popu(record,atoi(popu));
                     strncpy(menaje_limite,mensaje,199);// corto la longitud del mensaje
                     est_set_texto(record,menaje_limite);
+
+                    al_add(this, record);
+                    cantidadFilasLeidas++;
+            }
+            else if(record==NULL)//Sin memoria
+            {
+                printf("No hay memoria suficiente:\n");
+                system("pause");
+                break;
+            }
+        }
+    }
+    return retorno;
+}
+
+
+int parserEstructuraUsuario(FILE* pFile, ArrayList* this)
+{
+    int retorno = -1;
+    int cantidadFilasLeidas = 0;
+    int guardoDato;
+    void* record;
+//    int cantidadDatosLeidos;
+    char cabecera[50];
+    char id[50];
+    char nik[25];
+    char popu[50];
+   // char idusu[50];
+    //char menaje_limite[200];
+
+    if(pFile != NULL && this!=NULL)
+    {
+        retorno = -2;
+        if(TIENE_ENCABEZADO == 1)
+        {
+            fgets(cabecera, 80, pFile);//descarto la lectura del encabezado
+        }
+        while(!feof(pFile))
+        {
+            retorno = 0;
+            record = nuevo_usuario();
+            if(record != NULL)
+            {
+                fscanf(pFile,MASCARA_ARCHIVO2,id,nik,popu);
+               // fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,idusu,popu,mensaje);
+                    est_set_idUsu(record,atoi(id));
+                    est_set_nick(record,nik);
+                   // est_set_idUsuario(record,atoi(idusu));
+                    est_set_popu_Usu(record,atoi(popu));
+                  //  strncpy(menaje_limite,mensaje,199);// corto la longitud del mensaje
+
 
                     al_add(this, record);
                     cantidadFilasLeidas++;
