@@ -1,6 +1,6 @@
 #ifndef VISTA_H_INCLUDED
 #define VISTA_H_INCLUDED
-
+#include "Estructura.h"
 
 
 #endif // VISTA_H_INCLUDED
@@ -56,3 +56,4 @@ void vista_ingresarTexto (char texto[], int cantTexto, char pregunta[]);
 
 
 int vista_MuestraUnElementoUsuario(void * record);
+int vista_MuestraUnFEED(eFeed * record);

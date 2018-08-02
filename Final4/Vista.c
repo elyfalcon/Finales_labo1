@@ -12,7 +12,8 @@
 
 
 #define MASCARA_IMPRIMIR "%d\t%d\t%d\t%.50s\t\n"
-#define MASCARA_IMPRIMIR2 "%d\t%s\t%d\n"
+#define MASCARA_IMPRIMIR2 "%d\t%s\t\t%d\n"
+#define MASCARA_IMPRIMIR3 "%d\t%.25s\t%d\t%d\t%s\t%d"
 
 void vista_ShowMenu(char *opcion)
 {
@@ -53,7 +54,16 @@ int vista_MuestraUnElementoUsuario(void * record)
     }
     return retorno;
 }
-
+int vista_MuestraUnFEED(eFeed * record)
+{
+    int retorno=-1;
+    if(record !=NULL)
+    {
+        retorno=0;
+        printf(MASCARA_IMPRIMIR3,record->id_mensaje,record->mensaje,record->popu,record->id_usuario,record->nick,record->popu_feed);//definir una mascara
+    }
+    return retorno;
+}
 
 int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
 {
@@ -62,6 +72,8 @@ int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int
     int cont=0;
     if(this!=NULL && Titulo!=NULL)
     {
+        if(this->isEmpty(this)==0)
+        {
         retorno=0;
         system("cls");
         printf("\n\n-------- %s --------\n",Titulo);
@@ -89,6 +101,12 @@ int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int
             printf("\n Sin Datos a Motrar...\n");
             system("pause");
         }
+       }
+       else if(this->isEmpty !=0)
+       {
+           printf("Lista vacia\n");
+           system("pause");
+       }
     }//if(this!=NULL && Titulo!=NULL)
     return retorno;
 }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1533128810 source:c:\eli\utn\casa\final4\estructura.c
+1533231331 source:c:\eli\utn\casa\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -10,15 +10,15 @@
 	"Vista.h"
 	"Estructura.h"
 
-1533059108 source:c:\eli\utn\casa\final4\arraylist.c
+1533207593 source:c:\eli\utn\casa\final4\arraylist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 
-1532974468 c:\eli\utn\casa\final4\arraylist.h
+1533207593 c:\eli\utn\casa\final4\arraylist.h
 
-1533142987 source:c:\eli\utn\casa\final4\main.c
+1533228679 source:c:\eli\utn\casa\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -29,17 +29,18 @@
 	"Tools.h"
 	"Vista.h"
 
-1533053820 c:\eli\utn\casa\final4\archivo.h
+1533228543 c:\eli\utn\casa\final4\archivo.h
 
-1533137775 c:\eli\utn\casa\final4\estructura.h
+1533230657 c:\eli\utn\casa\final4\estructura.h
 
-1533073632 c:\eli\utn\casa\final4\gestion.h
+1533207593 c:\eli\utn\casa\final4\gestion.h
 
-1533131127 c:\eli\utn\casa\final4\tools.h
+1533213547 c:\eli\utn\casa\final4\tools.h
 
-1533054162 c:\eli\utn\casa\final4\vista.h
+1533231897 c:\eli\utn\casa\final4\vista.h
+	"Estructura.h"
 
-1533131127 source:c:\eli\utn\casa\final4\tools.c
+1533229374 source:c:\eli\utn\casa\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -49,7 +50,7 @@
 	"Gestion.h"
 	"Vista.h"
 
-1533143677 source:c:\eli\utn\casa\final4\vista.c
+1533231594 source:c:\eli\utn\casa\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -59,7 +60,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533137828 source:c:\eli\utn\casa\final4\archivo.c
+1533229222 source:c:\eli\utn\casa\final4\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -69,7 +70,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533126230 source:c:\eli\utn\casa\final4\gestion.c
+1533207593 source:c:\eli\utn\casa\final4\gestion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -159,7 +160,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533160897 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
+1533229224 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -169,23 +170,24 @@
 	"Tools.h"
 	"Vista.h"
 
-1532974468 c:\eli\utn\finales\finales_labo1\final4\arraylist.h
+1533207594 c:\eli\utn\finales\finales_labo1\final4\arraylist.h
 
-1533137776 c:\eli\utn\finales\finales_labo1\final4\estructura.h
+1533230658 c:\eli\utn\finales\finales_labo1\final4\estructura.h
 
-1533073632 c:\eli\utn\finales\finales_labo1\final4\gestion.h
+1533207594 c:\eli\utn\finales\finales_labo1\final4\gestion.h
 
-1533159013 c:\eli\utn\finales\finales_labo1\final4\tools.h
+1533213548 c:\eli\utn\finales\finales_labo1\final4\tools.h
 
-1533166727 c:\eli\utn\finales\finales_labo1\final4\vista.h
+1533231898 c:\eli\utn\finales\finales_labo1\final4\vista.h
+	"Estructura.h"
 
-1533059108 source:c:\eli\utn\finales\finales_labo1\final4\arraylist.c
+1533207594 source:c:\eli\utn\finales\finales_labo1\final4\arraylist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 
-1533158330 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
+1533231332 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -196,9 +198,9 @@
 	"Vista.h"
 	"Estructura.h"
 
-1533161143 c:\eli\utn\finales\finales_labo1\final4\archivo.h
+1533228544 c:\eli\utn\finales\finales_labo1\final4\archivo.h
 
-1533126232 source:c:\eli\utn\finales\finales_labo1\final4\gestion.c
+1533207594 source:c:\eli\utn\finales\finales_labo1\final4\gestion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -208,7 +210,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533166988 source:c:\eli\utn\finales\finales_labo1\final4\main.c
+1533228680 source:c:\eli\utn\finales\finales_labo1\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -219,7 +221,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533164047 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
+1533231596 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -229,7 +231,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533159013 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
+1533247449 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

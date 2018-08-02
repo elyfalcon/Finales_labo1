@@ -69,3 +69,4 @@ int tools_PedirEntero(char mensaje[]);
 
 
 
+ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*,void*));

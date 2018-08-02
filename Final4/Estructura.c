@@ -24,7 +24,29 @@ eUsuario* nuevo_usuario(void)
     returnAux = (eUsuario*)malloc(sizeof(eUsuario));
     return returnAux;
 }
-
+eUsuario* nuevo_feed(void)
+{
+    eFeed* returnAux;
+    returnAux = (eFeed*)malloc(sizeof(eFeed));
+    return returnAux;
+}
+//***************FEED**************
+eFeed* feed_new(int id_mensaje, char mensaje[200],int popu,int id_usuario,char nick[20], int pop_usuario)
+{
+    eFeed* retorno = NULL;
+    eFeed* pRecord = malloc(sizeof(eFeed));
+    if(pRecord != NULL)
+    {
+        est_set_idmensFeed(pRecord, id_mensaje);
+        est_set_textoFeed(pRecord, mensaje);
+        est_set_popuMens(pRecord, popu);
+        est_set_idUsuario(pRecord, id_usuario);
+        est_set_nickFeed(pRecord, nick);
+        est_set_popu_UsuFeed(pRecord, pop_usuario);
+        retorno = pRecord;
+    }
+    return retorno;
+}
 //**********GETTERS PARA LETRAS*****************
 
 /*char eLetra_getLetra(void * record)
@@ -167,7 +189,6 @@ char* est_get_nick(eUsuario* this)
     }
     return texto;
 }
-
 int est_set_nick(eUsuario* this, char* texto)
 {
     int retorno =0;
@@ -178,11 +199,125 @@ int est_set_nick(eUsuario* this, char* texto)
     }
     return retorno;
 }
+//**************FEED****************
+int est_set_idmensFeed(eFeed* this, int num)
+{
+    int retorno = 0;
+    if(this!=NULL)
+    {
+        this->id_mensaje=num;
+        retorno = 1;
+    }
+    return retorno;
+}
 
+int est_get_idmensFeed(eFeed* this)
+{
+    int num;
+    if(this!=NULL)
+    {
+        num=this->id_mensaje;
+    }
+    return num;
+}
+int est_set_idUsuFeed(eFeed* this, int num)
+{
+    int retorno = 0;
+    if(this!=NULL)
+    {
+        this->id_usuario=num;
+        retorno = 1;
+    }
+    return retorno;
+}
+int est_get_idUsuFeed(eFeed* this)
+{
+    int num;
+    if(this!=NULL)
+    {
+        num=this->id_usuario;
+    }
+    return num;
+}
+char* est_get_textoFeed(eFeed* this)
+{
+    char* texto = NULL;
+    if(this!=NULL)
+    {
+       texto = this->mensaje;
+    }
+    return texto;
+}
 
+int est_set_textoFeed(eFeed* this, char* texto)
+{
+    int retorno =0;
+    if(this!=NULL)
+    {
+        strcpy(this->mensaje,texto);
+        retorno =1;
+    }
+    return retorno;
+}
+char* est_get_nickFeed(eFeed* this)
+{
+    char* texto = NULL;
+    if(this!=NULL)
+    {
+        texto = this->nick;
+    }
+    return texto;
+}
+int est_set_nickFeed(eFeed* this, char* texto)
+{
+    int retorno =0;
+    if(this!=NULL)
+    {
+        strcpy(this->nick,texto);
+        retorno =1;
+    }
+    return retorno;
+}
+int est_set_popuMens(eFeed* this, int num)
+{
+    int retorno = 0;
+    if(this!=NULL)
+    {
+        this->popu=num;
+        retorno = 1;
+    }
+    return retorno;
+}
 
+int est_get_popuMens(eFeed* this)
+{
+    int num;
+    if(this!=NULL)
+    {
+        num=this->popu;
+    }
+    return num;
+}
+int est_set_popu_UsuFeed(eFeed* this, int num)
+{
+    int retorno = 0;
+    if(this!=NULL)
+    {
+        this->popu_feed=num;
+        retorno = 1;
+    }
+    return retorno;
+}
 
-
+int est_get_popu_UsuFeed(eFeed* this)
+{
+    int num;
+    if(this!=NULL)
+    {
+        num=this->popu_feed;
+    }
+    return num;
+}
 //*************************************************
 
 /*int est_set_flotante(eMensajes* this, float flotante)
@@ -310,23 +445,39 @@ long int est_get_largo(eMensajes* this)
 int est_compara_elementos_Estructura(void* pElementA,void* pElementB)
 {
     int retorno=-1;
-    void *tmp_1;
-    void *tmp_2;
-    tmp_1=(void* ) pElementA;
-    tmp_2=(void * ) pElementB;
+    eUsuario *tmp_1;
+    eMensajes *tmp_2;
+    tmp_1=(eUsuario* ) pElementA;
+    tmp_2=(eMensajes * ) pElementB;
 
-  /*  if(tmp_1-> > tmp_2->void)
+    if(tmp_1->id_usuario > tmp_2->id_usuario)
     {
         retorno=1;
     }
     else
     {
-        if(tmp_1->letra < tmp_2->letra)
+        if(tmp_1->id_usuario < tmp_2->id_usuario)
         {
             retorno=0;
         }
     }
-    return retorno;*/
+    return retorno;
+}
+int est_ComparaElementos(void* eElemenA,void* eElemenB)
+{//-2 ERROR  y espues el standaroutput de strcmp
+    int retorno=-2;
+    eMensajes *prd_1;
+    eUsuario *prd_2;
+
+    if(eElemenA!=NULL && eElemenB!=NULL)
+    {
+        prd_1=(eUsuario * ) eElemenA;
+        prd_2=(eMensajes * ) eElemenB;
+        if(prd_1->id_usuario == prd_2->id_usuario)
+       // retorno=strcmp( prd_1->letra,prd_2->letra );
+       retorno=0;
+    }
+    return retorno;
 }
 int est_EsVocal(char Letra)
 {

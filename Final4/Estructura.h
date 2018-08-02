@@ -15,6 +15,17 @@ typedef struct
     char nick[20];
     int popu_usuario;
 }eUsuario;
+
+typedef struct
+{
+    int id_mensaje;
+    char mensaje[200];
+    int popu;
+    int id_usuario;
+    char nick[20];
+    int popu_feed;
+}eFeed;
+
 #endif // ESTRUCTURA_H_INCLUDED
 
 
@@ -75,7 +86,7 @@ eMensajes* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
 
 
 
-
+int est_ComparaElementos(void* eElemenA,void* eElemenB);
 
 
 

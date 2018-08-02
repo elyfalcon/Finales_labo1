@@ -10,7 +10,7 @@
 #include "Vista.h"
 
 #define NOM_ARCH "messages.csv"
-#define NOM_ARCH2 "usuarios.csv"
+#define NOM_ARCH2 "usuarios2.csv"
 
 
 int main()
@@ -20,7 +20,10 @@ int main()
 
     ArrayList *ListaMensajes;
     ListaMensajes=al_newArrayList();
-
+    ArrayList *ListaUsuarios;
+    ListaUsuarios=al_newArrayList();
+    ArrayList* ListaFeed;
+    ListaFeed=al_newArrayList();
 
     if(ListaMensajes !=NULL)
     {
@@ -35,10 +38,15 @@ int main()
                 cargarDesdeArchivo(ListaMensajes,NOM_ARCH,parserEstructura);
                 vista_MuestraElementos(ListaMensajes,"LISTADO DE MENSAJES Y POPULARIDAD",vista_MuestraUnElemento,0,ListaMensajes->len(ListaMensajes),15);
                 system("cls");
-                cargarDesdeArchivo(ListaMensajes,NOM_ARCH2,parserEstructuraUsuario);
-                vista_MuestraElementos(ListaMensajes,"LISTADO DE USUARIOS CON POPULARIDAD",vista_MuestraUnElementoUsuario,0,ListaMensajes->len(ListaMensajes),25);
+                cargarDesdeArchivo(ListaUsuarios,NOM_ARCH2,parserEstructuraUsuario);
+                vista_MuestraElementos(ListaUsuarios,"LISTADO DE USUARIOS CON POPULARIDAD",vista_MuestraUnElementoUsuario,0,ListaUsuarios->len(ListaUsuarios),25);
                 break;
             case 2:
+                ListaFeed=Compara_2ArrayList(ListaMensajes,ListaUsuarios,est_ComparaElementos);
+                if(ListaFeed !=NULL)
+                {
+                 vista_MuestraElementos(ListaFeed,"LISTADO DE POPULARIDAD",vista_MuestraUnFEED,0,ListaFeed->len(ListaFeed),15);
+                }
                 break;
             case 0:
                 seguir='N';
