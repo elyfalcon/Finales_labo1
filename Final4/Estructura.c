@@ -31,7 +31,7 @@ eUsuario* nuevo_feed(void)
     return returnAux;
 }
 //***************FEED**************
-eFeed* feed_new(int id_mensaje, char mensaje[200],int popu,int id_usuario,char nick[20], int pop_usuario)
+eFeed* feed_new(int id_mensaje, char mensaje[],int popu,int id_usuario,char nick[], int pop_usuario)
 {
     eFeed* retorno = NULL;
     eFeed* pRecord = malloc(sizeof(eFeed));

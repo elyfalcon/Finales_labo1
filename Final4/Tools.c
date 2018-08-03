@@ -141,18 +141,19 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
              {
                // feed=feed_new(est_get_idmensFeed(messg),est_get_textoFeed(messg),est_get_popuMens(messg),est_get_idUsuFeed(usu),est_get_popu_UsuFeed(usu));
                 feed=nuevo_feed();
+                est_get_idmensFeed(messg);
+                est_get_textoFeed(messg);
+                est_get_popuMens(messg);
+                est_get_idUsuFeed(usu);
+                est_get_popu_UsuFeed(usu);
+
                 est_set_idmensFeed(feed,messg);
                 est_set_textoFeed(feed, messg);
                 est_set_popuMens(feed, messg);
                 est_set_idUsuario(feed, usu);
                 est_set_nickFeed(feed, usu);
                 est_set_popu_UsuFeed(feed, usu);
-              /*   feed=est_set_idmensFeed(messg);
-                 feed=est_set_textoFeed(messg);
-                 feed=est_set_popuMens(messg);
-                 feed=est_set_idUsuFeed(usu);
-                 feed=est_set_nickFeed(usu);
-                 feed=est_set_popu_UsuFeed(usu);*/
+
                  if(feed !=NULL)
                  {
                     ListAux->add(ListAux,feed);

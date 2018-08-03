@@ -187,7 +187,7 @@
 	<string.h>
 	"ArrayList.h"
 
-1533231332 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
+1533249592 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -231,7 +231,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533247449 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
+1533249646 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
