@@ -7,7 +7,10 @@
 #include "Estructura.h"
 #include "Gestion.h"
 #include "Vista.h"
-
+#include "fenv.h"
+#include "Mensaje.h"
+#include "Usuario.h"
+#define NOM_FEED "feed.csv"
 
 
 char Responder(char mensaje[])
@@ -129,30 +132,17 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
     if(this !=NULL && that !=NULL)
     {
         retorno=0;
-      //  feed=nuevo_feed();
         ListAux=al_newArrayList();
         for(i=0;i<this->len(this);i++) //recorro el 1er ArrayList
         {
-         messg=al_get(this,i);
+         messg=(eMensajes*)al_get(this,i);
          for(j=0;j <that->len(that);j++) //recorro el 2 ArrayList
          {
-             usu=al_get(that,j);
-             if(pFunc(al_get(this,i),al_get(that,j))==0)
+             usu=(eUsuario*)al_get(that,j);
+             if(pFunc(messg,usu)==0)
              {
-               // feed=feed_new(est_get_idmensFeed(messg),est_get_textoFeed(messg),est_get_popuMens(messg),est_get_idUsuFeed(usu),est_get_popu_UsuFeed(usu));
-                feed=nuevo_feed();
-                est_get_idmensFeed(messg);
-                est_get_textoFeed(messg);
-                est_get_popuMens(messg);
-                est_get_idUsuFeed(usu);
-                est_get_popu_UsuFeed(usu);
-
-                est_set_idmensFeed(feed,messg);
-                est_set_textoFeed(feed, messg);
-                est_set_popuMens(feed, messg);
-                est_set_idUsuario(feed, usu);
-                est_set_nickFeed(feed, usu);
-                est_set_popu_UsuFeed(feed, usu);
+                 //int id_mensaje, char mensaje[200],int popu,int id_usuario,char nick[20], int pop_usuario
+                feed=feed_new(mensaje_get_id(messg),mensaje_get_texto(messg),mensaje_get_popu(messg),usuario_get_id(usu),usuario_get_nick(usu),usuario_get_popu(usu));
 
                  if(feed !=NULL)
                  {
@@ -166,6 +156,7 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
     }//fin if(this!=NULL && that !=NULL)
     if(retorno==1)
     {
+        GuardarArchivoT(ListAux,NOM_FEED);
         printf("Se creo correctamente \n");
         system("pause");
     }

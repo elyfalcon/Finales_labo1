@@ -43,14 +43,26 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Estructura.h" />
+		<Unit filename="Feed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Feed.h" />
 		<Unit filename="Gestion.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Gestion.h" />
+		<Unit filename="Mensaje.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Mensaje.h" />
 		<Unit filename="Tools.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Tools.h" />
+		<Unit filename="Usuario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Usuario.h" />
 		<Unit filename="Vista.c">
 			<Option compilerVar="CC" />
 		</Unit>

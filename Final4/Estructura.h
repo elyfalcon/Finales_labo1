@@ -1,30 +1,8 @@
 #ifndef ESTRUCTURA_H_INCLUDED
 #define ESTRUCTURA_H_INCLUDED
 
-typedef struct
-{
-    int id_mensaje;
-    char mensaje[200];
-    int popu;
-    int id_usuario;
-}eMensajes;
 
-typedef struct
-{
-    int id_usuario;
-    char nick[20];
-    int popu_usuario;
-}eUsuario;
 
-typedef struct
-{
-    int id_mensaje;
-    char mensaje[200];
-    int popu;
-    int id_usuario;
-    char nick[20];
-    int popu_feed;
-}eFeed;
 
 #endif // ESTRUCTURA_H_INCLUDED
 
@@ -36,7 +14,7 @@ typedef struct
  * \return
  *
  */
-eMensajes* nuevo_record(void);
+
 
 /** \brief Compara 2 elementos de una estructura
  *
@@ -82,7 +60,7 @@ int est_Existe_elementos(ArrayList* this ,char * cadLetras);
  * \return eEstructura* BuscaMaximo(ArrayList* this, int
  *
  */
-eMensajes* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
+//eMensajes* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
 
 
 

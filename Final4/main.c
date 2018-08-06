@@ -8,9 +8,12 @@
 #include "Gestion.h"
 #include "Tools.h"
 #include "Vista.h"
-
+#include "fenv.h"
+#include "Mensaje.h"
+#include "Usuario.h"
 #define NOM_ARCH "messages.csv"
 #define NOM_ARCH2 "usuarios2.csv"
+#define NOM_FEED "feed.csv"
 
 
 int main()
@@ -36,16 +39,16 @@ int main()
             {
             case 1:
                 cargarDesdeArchivo(ListaMensajes,NOM_ARCH,parserEstructura);
-                vista_MuestraElementos(ListaMensajes,"LISTADO DE MENSAJES Y POPULARIDAD",vista_MuestraUnElemento,0,ListaMensajes->len(ListaMensajes),15);
+                vista_MuestraElementos(ListaMensajes,"LISTADO DE MENSAJES Y POPULARIDAD","ID_M\tMENSAJE\t\tLIKES\tID_USUARIO",vista_MuestraUnElemento,0,ListaMensajes->len(ListaMensajes),15);
                 system("cls");
                 cargarDesdeArchivo(ListaUsuarios,NOM_ARCH2,parserEstructuraUsuario);
-                vista_MuestraElementos(ListaUsuarios,"LISTADO DE USUARIOS CON POPULARIDAD",vista_MuestraUnElementoUsuario,0,ListaUsuarios->len(ListaUsuarios),25);
+                vista_MuestraElementos(ListaUsuarios,"LISTADO DE USUARIOS CON POPULARIDAD","ID_USU\tNICK\t\tFOLLOWERS",vista_MuestraUnElementoUsuario,0,ListaUsuarios->len(ListaUsuarios),25);
                 break;
             case 2:
                 ListaFeed=Compara_2ArrayList(ListaMensajes,ListaUsuarios,est_ComparaElementos);
                 if(ListaFeed !=NULL)
                 {
-                 vista_MuestraElementos(ListaFeed,"LISTADO DE POPULARIDAD",vista_MuestraUnFEED,0,ListaFeed->len(ListaFeed),15);
+                 vista_MuestraElementos(ListaFeed,"LISTADO DE POPULARIDAD","ID_M\tMENSAJE\t\t\t\t\tLIKES\tID_USU\tNICK\t\tFOLLOWERS",vista_MuestraUnFEED,0,ListaFeed->len(ListaFeed),15);
                 }
                 break;
             case 0:

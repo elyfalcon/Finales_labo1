@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1533231331 source:c:\eli\utn\casa\final4\estructura.c
+1533579539 source:c:\eli\utn\casa\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -9,6 +9,9 @@
 	"Tools.h"
 	"Vista.h"
 	"Estructura.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
 1533207593 source:c:\eli\utn\casa\final4\arraylist.c
 	<stdio.h>
@@ -18,7 +21,7 @@
 
 1533207593 c:\eli\utn\casa\final4\arraylist.h
 
-1533228679 source:c:\eli\utn\casa\final4\main.c
+1533579274 source:c:\eli\utn\casa\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -28,19 +31,22 @@
 	"Gestion.h"
 	"Tools.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
 1533228543 c:\eli\utn\casa\final4\archivo.h
 
-1533230657 c:\eli\utn\casa\final4\estructura.h
+1533579410 c:\eli\utn\casa\final4\estructura.h
 
 1533207593 c:\eli\utn\casa\final4\gestion.h
 
 1533213547 c:\eli\utn\casa\final4\tools.h
 
-1533231897 c:\eli\utn\casa\final4\vista.h
-	"Estructura.h"
+1533579487 c:\eli\utn\casa\final4\vista.h
+	"Feed.h"
 
-1533229374 source:c:\eli\utn\casa\final4\tools.c
+1533579584 source:c:\eli\utn\casa\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -49,8 +55,11 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
-1533231594 source:c:\eli\utn\casa\final4\vista.c
+1533579456 source:c:\eli\utn\casa\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -59,8 +68,11 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Tools.h"
+	"Feed.h"
+	"Usuario.h"
+	"Mensaje.h"
 
-1533229222 source:c:\eli\utn\casa\final4\archivo.c
+1533579552 source:c:\eli\utn\casa\final4\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -69,6 +81,9 @@
 	"Gestion.h"
 	"Tools.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
 1533207593 source:c:\eli\utn\casa\final4\gestion.c
 	<stdio.h>
@@ -160,7 +175,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1533229224 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
+1533585195 source:c:\eli\utn\finales\finales_labo1\final4\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -169,17 +184,20 @@
 	"Gestion.h"
 	"Tools.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
 1533207594 c:\eli\utn\finales\finales_labo1\final4\arraylist.h
 
-1533230658 c:\eli\utn\finales\finales_labo1\final4\estructura.h
+1533579412 c:\eli\utn\finales\finales_labo1\final4\estructura.h
 
 1533207594 c:\eli\utn\finales\finales_labo1\final4\gestion.h
 
 1533213548 c:\eli\utn\finales\finales_labo1\final4\tools.h
 
-1533231898 c:\eli\utn\finales\finales_labo1\final4\vista.h
-	"Estructura.h"
+1533588170 c:\eli\utn\finales\finales_labo1\final4\vista.h
+	"Feed.h"
 
 1533207594 source:c:\eli\utn\finales\finales_labo1\final4\arraylist.c
 	<stdio.h>
@@ -187,7 +205,7 @@
 	<string.h>
 	"ArrayList.h"
 
-1533249592 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
+1533579540 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -197,6 +215,9 @@
 	"Tools.h"
 	"Vista.h"
 	"Estructura.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
 1533228544 c:\eli\utn\finales\finales_labo1\final4\archivo.h
 
@@ -210,7 +231,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533228680 source:c:\eli\utn\finales\finales_labo1\final4\main.c
+1533588481 source:c:\eli\utn\finales\finales_labo1\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -220,8 +241,11 @@
 	"Gestion.h"
 	"Tools.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 
-1533231596 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
+1533588170 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -230,8 +254,11 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Tools.h"
+	"Feed.h"
+	"Usuario.h"
+	"Mensaje.h"
 
-1533249646 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
+1533585666 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -240,4 +267,99 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
+
+1533578931 c:\eli\utn\casa\final4\feed.h
+
+1533579274 source:c:\eli\utn\casa\final4\feed.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"Feed.h"
+
+1533578931 c:\eli\utn\casa\final4\mensaje.h
+
+1533578931 c:\eli\utn\casa\final4\usuario.h
+
+1533579655 source:c:\eli\utn\casa\final4\mensaje.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
+
+1533579655 source:c:\eli\utn\casa\final4\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
+
+1533578932 c:\eli\utn\finales\finales_labo1\final4\feed.h
+
+1533578932 c:\eli\utn\finales\finales_labo1\final4\mensaje.h
+
+1533578932 c:\eli\utn\finales\finales_labo1\final4\usuario.h
+
+1533585343 source:c:\eli\utn\finales\finales_labo1\final4\feed.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"Feed.h"
+
+1533579656 source:c:\eli\utn\finales\finales_labo1\final4\mensaje.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
+
+1533579656 source:c:\eli\utn\finales\finales_labo1\final4\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"fenv.h"
+	"Mensaje.h"
+	"Usuario.h"
 

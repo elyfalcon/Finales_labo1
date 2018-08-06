@@ -8,45 +8,17 @@
 #include "Tools.h"
 #include "Vista.h"
 #include "Estructura.h"
-
+#include "fenv.h"
+#include "Mensaje.h"
+#include "Usuario.h"
 
 //********CONSTRUCTORES*********************
-eMensajes* nuevo_mensaje(void)
-{
-    eMensajes* returnAux;
-    returnAux = (eMensajes*)malloc(sizeof(eMensajes));
-    return returnAux;
-}
 
-eUsuario* nuevo_usuario(void)
-{
-    eUsuario* returnAux;
-    returnAux = (eUsuario*)malloc(sizeof(eUsuario));
-    return returnAux;
-}
-eUsuario* nuevo_feed(void)
-{
-    eFeed* returnAux;
-    returnAux = (eFeed*)malloc(sizeof(eFeed));
-    return returnAux;
-}
+
+
+
 //***************FEED**************
-eFeed* feed_new(int id_mensaje, char mensaje[],int popu,int id_usuario,char nick[], int pop_usuario)
-{
-    eFeed* retorno = NULL;
-    eFeed* pRecord = malloc(sizeof(eFeed));
-    if(pRecord != NULL)
-    {
-        est_set_idmensFeed(pRecord, id_mensaje);
-        est_set_textoFeed(pRecord, mensaje);
-        est_set_popuMens(pRecord, popu);
-        est_set_idUsuario(pRecord, id_usuario);
-        est_set_nickFeed(pRecord, nick);
-        est_set_popu_UsuFeed(pRecord, pop_usuario);
-        retorno = pRecord;
-    }
-    return retorno;
-}
+
 //**********GETTERS PARA LETRAS*****************
 
 /*char eLetra_getLetra(void * record)
@@ -57,267 +29,11 @@ eFeed* feed_new(int id_mensaje, char mensaje[],int popu,int id_usuario,char nick
     return tmp_1->letra;
 }*/
 //*****************setters y getters genericos *****************************
-int est_set_idmensaje(eMensajes* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->id_mensaje=num;
-        retorno = 1;
-    }
-    return retorno;
-}
 
-int est_get_idmensaje(eMensajes* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->id_mensaje;
-    }
-    return num;
-}
-int est_set_idUsuario(eMensajes* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->id_usuario=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-
-int est_get_idUsuario(eMensajes* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->id_usuario;
-    }
-    return num;
-}
-int est_set_popu(eMensajes* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->popu=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-
-int est_get_popu(eMensajes* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->popu;
-    }
-    return num;
-}
-
-char* est_get_texto(eMensajes* this)
-{
-    char* texto = NULL;
-    if(this!=NULL)
-    {
-        texto = this->mensaje;
-    }
-    return texto;
-}
-
-int est_set_texto(eMensajes* this, char* texto)
-{
-    int retorno =0;
-    if(this!=NULL)
-    {
-        strcpy(this->mensaje,texto);
-        retorno =1;
-    }
-    return retorno;
-}
 //************USUARIO***********
-int est_set_idUsu(eUsuario* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->id_usuario=num;
-        retorno = 1;
-    }
-    return retorno;
-}
 
-int est_get_idUsu(eUsuario* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->id_usuario;
-    }
-    return num;
-}
-
-int est_set_popu_Usu(eUsuario* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->popu_usuario=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-
-int est_get_popu_Usu(eUsuario* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->popu_usuario;
-    }
-    return num;
-}
-char* est_get_nick(eUsuario* this)
-{
-    char* texto = NULL;
-    if(this!=NULL)
-    {
-        texto = this->nick;
-    }
-    return texto;
-}
-int est_set_nick(eUsuario* this, char* texto)
-{
-    int retorno =0;
-    if(this!=NULL)
-    {
-        strcpy(this->nick,texto);
-        retorno =1;
-    }
-    return retorno;
-}
 //**************FEED****************
-int est_set_idmensFeed(eFeed* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->id_mensaje=num;
-        retorno = 1;
-    }
-    return retorno;
-}
 
-int est_get_idmensFeed(eFeed* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->id_mensaje;
-    }
-    return num;
-}
-int est_set_idUsuFeed(eFeed* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->id_usuario=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-int est_get_idUsuFeed(eFeed* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->id_usuario;
-    }
-    return num;
-}
-char* est_get_textoFeed(eFeed* this)
-{
-    char* texto = NULL;
-    if(this!=NULL)
-    {
-       texto = this->mensaje;
-    }
-    return texto;
-}
-
-int est_set_textoFeed(eFeed* this, char* texto)
-{
-    int retorno =0;
-    if(this!=NULL)
-    {
-        strcpy(this->mensaje,texto);
-        retorno =1;
-    }
-    return retorno;
-}
-char* est_get_nickFeed(eFeed* this)
-{
-    char* texto = NULL;
-    if(this!=NULL)
-    {
-        texto = this->nick;
-    }
-    return texto;
-}
-int est_set_nickFeed(eFeed* this, char* texto)
-{
-    int retorno =0;
-    if(this!=NULL)
-    {
-        strcpy(this->nick,texto);
-        retorno =1;
-    }
-    return retorno;
-}
-int est_set_popuMens(eFeed* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->popu=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-
-int est_get_popuMens(eFeed* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->popu;
-    }
-    return num;
-}
-int est_set_popu_UsuFeed(eFeed* this, int num)
-{
-    int retorno = 0;
-    if(this!=NULL)
-    {
-        this->popu_feed=num;
-        retorno = 1;
-    }
-    return retorno;
-}
-
-int est_get_popu_UsuFeed(eFeed* this)
-{
-    int num;
-    if(this!=NULL)
-    {
-        num=this->popu_feed;
-    }
-    return num;
-}
 //*************************************************
 
 /*int est_set_flotante(eMensajes* this, float flotante)
@@ -427,18 +143,6 @@ long int est_get_largo(eMensajes* this)
     return retorno;
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //****************************************************

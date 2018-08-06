@@ -8,12 +8,13 @@
 #include "Estructura.h"
 #include "Gestion.h"
 #include "Tools.h"
-
-
+#include "Feed.h"
+#include "Usuario.h"
+#include "Mensaje.h"
 
 #define MASCARA_IMPRIMIR "%d\t%d\t%d\t%.50s\t\n"
 #define MASCARA_IMPRIMIR2 "%d\t%s\t\t%d\n"
-#define MASCARA_IMPRIMIR3 "%d\t%.25s\t%d\t%d\t%s\t%d"
+#define MASCARA_IMPRIMIR3 "%d\t%.25s\t\t%d\t%d\t%s\t\t%d\n"
 
 void vista_ShowMenu(char *opcion)
 {
@@ -39,7 +40,7 @@ int vista_MuestraUnElemento(eMensajes * record)
     if(record !=NULL)
     {
         retorno=0;
-        printf(MASCARA_IMPRIMIR,est_get_idmensaje(record),est_get_idUsuario(record),est_get_popu(record),est_get_texto(record));//definir una mascara
+        printf(MASCARA_IMPRIMIR,mensaje_get_id(record),mensaje_get_idUsuario(record),mensaje_get_popu(record),mensaje_get_texto(record));//definir una mascara
     }
     return retorno;
 }
@@ -50,7 +51,7 @@ int vista_MuestraUnElementoUsuario(void * record)
     if(record !=NULL)
     {
         retorno=0;
-        printf(MASCARA_IMPRIMIR2,est_get_idUsu(record),est_get_nick(record),est_get_popu_Usu(record));//definir una mascara
+        printf(MASCARA_IMPRIMIR2,usuario_get_id(record),usuario_get_nick(record),usuario_get_popu(record));//definir una mascara
     }
     return retorno;
 }
@@ -60,12 +61,14 @@ int vista_MuestraUnFEED(eFeed * record)
     if(record !=NULL)
     {
         retorno=0;
-        printf(MASCARA_IMPRIMIR3,record->id_mensaje,record->mensaje,record->popu,record->id_usuario,record->nick,record->popu_feed);//definir una mascara
+      //  printf(MASCARA_IMPRIMIR3,feed_record->id_mensaje,record->mensaje,record->popu,record->id_usuario,record->nick,record->popu_feed);//definir una mascara
+
+        printf(MASCARA_IMPRIMIR3,feed_get_idmens(record),feed_get_texto(record),feed_get_popuMens(record),feed_get_idUsu(record),feed_get_nick(record),feed_get_popu_Usu(record));//definir una mascara
     }
     return retorno;
 }
 
-int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
+int vista_MuestraElementos(ArrayList *this,char *Titulo,char * SubTitulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
 {
     int retorno=-1;
     int i;
@@ -77,7 +80,8 @@ int vista_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int
         retorno=0;
         system("cls");
         printf("\n\n-------- %s --------\n",Titulo);
-        printf("\nId\tId_Mens\tLikes\tMENSAJE\n\n");
+        printf("\n%s\n",SubTitulo);
+        printf("===============================================================================\n");
         if(this->isEmpty(this)==0)//No esta vacio
         {
             for(i=desde;i<hasta;i++)

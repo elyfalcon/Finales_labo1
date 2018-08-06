@@ -7,13 +7,16 @@
 #include "Gestion.h"
 #include "Tools.h"
 #include "Vista.h"
-
+#include "fenv.h"
+#include "Mensaje.h"
+#include "Usuario.h"
 
 #define MASCARA_ARCHIVO "%[^,],%[^,],%[^,],%[^\n]\n" //defino aca la mascara para el parser de mensajes
 #define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^\n]\n" //defino la mascara para los usuarios
+#define MASCARA_ARCHIVO_FEED "%d,%s,%d,%d,%s,%d\n"
 #define TIENE_ENCABEZADO 1
 
-int cargarDesdeArchivo(ArrayList *this,const char* nombre)
+int cargarDesdeArchivo(ArrayList *this,const char* nombre,int (*pFunc)(void*,void*))
 {
 	int flag = 0;
 	FILE *pArchivo;
@@ -25,7 +28,7 @@ int cargarDesdeArchivo(ArrayList *this,const char* nombre)
         {
             flag=0;
 		//pArchivo= fopen("nombre", "wb");
-            if(parserEstructura(pArchivo,this)==0)
+            if(pFunc(pArchivo,this)==0)
             {
                 flag= 1;
                 fclose(pArchivo);
@@ -75,11 +78,11 @@ int parserEstructura(FILE* pFile, ArrayList* this)
             {
                 fscanf(pFile,MASCARA_ARCHIVO,id,idusu,popu,mensaje);
                // fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,idusu,popu,mensaje);
-                    est_set_idmensaje(record,atoi(id));
-                    est_set_idUsuario(record,atoi(idusu));
-                    est_set_popu(record,atoi(popu));
-                    strncpy(menaje_limite,mensaje,199);// corto la longitud del mensaje
-                    est_set_texto(record,menaje_limite);
+                    mensaje_set_id(record,atoi(id));
+                    mensaje_set_idUsuario(record,atoi(idusu));
+                    mensaje_set_popu(record,atoi(popu));
+                    strncpy(menaje_limite,mensaje,200);// corto la longitud del mensaje
+                    mensaje_set_texto(record,menaje_limite);
 
                     al_add(this, record);
                     cantidadFilasLeidas++;
@@ -124,12 +127,9 @@ int parserEstructuraUsuario(FILE* pFile, ArrayList* this)
             if(record != NULL)
             {
                 fscanf(pFile,MASCARA_ARCHIVO2,id,nik,popu);
-               // fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,idusu,popu,mensaje);
-                    est_set_idUsu(record,atoi(id));
-                   // est_set_idUsuario(record,atoi(idusu));
-                    est_set_popu(record,atoi(popu));
-                    strncpy(menaje_limite,mensaje,199);// corto la longitud del mensaje
-                    est_set_texto(record,menaje_limite);
+                    usuario_set_id(record,atoi(id));
+                    usuario_set_nick(record,nik);
+                    usuario_set_popu(record,atoi(popu));
 
                     al_add(this, record);
                     cantidadFilasLeidas++;
@@ -163,10 +163,11 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
                 if(record !=NULL)
                 {
                     tamanio=al_len(this);
+                     fprintf(f,"ID_MENSAJE,MENSAJE,POPULARIDAD_MENSAJE,ID_USUARI,NICK,POPULARIDAD_USUARIO \n");
                     for (i=0; i<tamanio; i++)
                     {
                     record = (void*)al_get(this, i);
-                //    fprintf(f,MASCARA_ARCHIVO,eLetra_getLetra(record),letra_get_nombre(record),letra_get_vocal(record),letra_get_conson(record));
+                    fprintf(f,MASCARA_ARCHIVO_FEED,feed_get_idmens(record),feed_get_texto(record),feed_get_popuMens(record),feed_get_idUsuFeed(record),est_get_nickFeed(record),est_get_popu_UsuFeed(record));
                     retorno=1;
                     }//fin for
                     }//fin if(aux!=NULL)
