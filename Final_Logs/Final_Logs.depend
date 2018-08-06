@@ -1,0 +1,202 @@
+# depslib dependency file v1.0
+1533207593 source:c:\eli\utn\casa\final_logs\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533207593 c:\eli\utn\casa\final_logs\arraylist.h
+
+1533319308 source:c:\eli\utn\casa\final_logs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Tools.h"
+
+1533312397 c:\eli\utn\casa\final_logs\archivo.h
+
+1533310773 source:c:\eli\utn\casa\final_logs\logs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Vista.h"
+
+1533300954 c:\eli\utn\casa\final_logs\logs.h
+
+1533300954 c:\eli\utn\casa\final_logs\service.h
+
+1533317329 c:\eli\utn\casa\final_logs\tools.h
+	"Logs.h"
+
+1533310749 source:c:\eli\utn\casa\final_logs\service.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Vista.h"
+
+1533312200 source:c:\eli\utn\casa\final_logs\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+
+1533312470 source:c:\eli\utn\casa\final_logs\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Tools.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+
+1533310785 c:\eli\utn\casa\final_logs\vista.h
+
+1533318849 source:c:\eli\utn\casa\final_logs\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+
+1533319766 source:c:\eli\utn\casa\final_logs\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+
+1533314211 c:\eli\utn\casa\final_logs\gestion.h
+
+1533428663 source:c:\eli\utn\finales\finales_labo1\final_logs\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Tools.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+
+1533207594 c:\eli\utn\finales\finales_labo1\final_logs\arraylist.h
+
+1533317330 c:\eli\utn\finales\finales_labo1\final_logs\tools.h
+	"Logs.h"
+
+1533300956 c:\eli\utn\finales\finales_labo1\final_logs\logs.h
+
+1533513089 c:\eli\utn\finales\finales_labo1\final_logs\vista.h
+
+1533300956 c:\eli\utn\finales\finales_labo1\final_logs\service.h
+
+1533424155 source:c:\eli\utn\finales\finales_labo1\final_logs\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533513751 source:c:\eli\utn\finales\finales_labo1\final_logs\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+	"Errores.h"
+
+1533314212 c:\eli\utn\finales\finales_labo1\final_logs\gestion.h
+
+1533310774 source:c:\eli\utn\finales\finales_labo1\final_logs\logs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Vista.h"
+
+1533312398 c:\eli\utn\finales\finales_labo1\final_logs\archivo.h
+
+1533513412 source:c:\eli\utn\finales\finales_labo1\final_logs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Tools.h"
+	"Errores.h"
+
+1533310750 source:c:\eli\utn\finales\finales_labo1\final_logs\service.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Vista.h"
+
+1533498807 source:c:\eli\utn\finales\finales_labo1\final_logs\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Logs.h"
+	"Service.h"
+
+1533513068 source:c:\eli\utn\finales\finales_labo1\final_logs\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Errores.h"
+
+1533511650 source:c:\eli\utn\finales\finales_labo1\final_logs\errores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Tools.h"
+	"Errores.h"
+
+1533511650 c:\eli\utn\finales\finales_labo1\final_logs\errores.h
+

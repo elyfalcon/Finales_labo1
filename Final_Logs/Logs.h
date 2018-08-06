@@ -1,0 +1,14 @@
+#ifndef LOGS_H_INCLUDED
+#define LOGS_H_INCLUDED
+
+
+typedef struct
+{
+    char date[11];
+    char time[6];
+    int serviceId;
+    int gravedad;
+    char msg[60];
+}eLogEntry;
+
+#endif // LOGS_H_INCLUDED
