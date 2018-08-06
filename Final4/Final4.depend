@@ -205,7 +205,7 @@
 	<string.h>
 	"ArrayList.h"
 
-1533579540 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
+1533589865 source:c:\eli\utn\finales\finales_labo1\final4\estructura.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -231,7 +231,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1533588481 source:c:\eli\utn\finales\finales_labo1\final4\main.c
+1533589974 source:c:\eli\utn\finales\finales_labo1\final4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -245,7 +245,7 @@
 	"Mensaje.h"
 	"Usuario.h"
 
-1533588170 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
+1533588605 source:c:\eli\utn\finales\finales_labo1\final4\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -258,7 +258,7 @@
 	"Usuario.h"
 	"Mensaje.h"
 
-1533585666 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
+1533589997 source:c:\eli\utn\finales\finales_labo1\final4\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

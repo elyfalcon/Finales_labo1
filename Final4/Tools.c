@@ -141,7 +141,6 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
              usu=(eUsuario*)al_get(that,j);
              if(pFunc(messg,usu)==0)
              {
-                 //int id_mensaje, char mensaje[200],int popu,int id_usuario,char nick[20], int pop_usuario
                 feed=feed_new(mensaje_get_id(messg),mensaje_get_texto(messg),mensaje_get_popu(messg),usuario_get_id(usu),usuario_get_nick(usu),usuario_get_popu(usu));
 
                  if(feed !=NULL)
@@ -149,7 +148,6 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
                     ListAux->add(ListAux,feed);
                     retorno=1;
                  }//fin if(feed !=NULL)
-
              }//fin if(pFunc(al_get(this,i),al_get(that,j))==0)
          }//for(j=0;j <that->len(that);j++)
         }// fin for(i=0;i<this->len(this);i++)
@@ -161,4 +159,21 @@ ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*
         system("pause");
     }
     return ListAux;
+}
+//*******************ORDENAMIENTO********************
+ArrayList* ListarPorPopularidad(ArrayList *this,int orden)
+{
+    ArrayList *ListOrdenada;
+    ListOrdenada=NULL;
+    if(this!=NULL)
+    {
+       // ListOrdenada=al_newArrayList();
+        //ListOrdenada=al_clone(this);
+        ListOrdenada=al_clone(this);
+        if(ListOrdenada !=NULL)
+        {
+            ListOrdenada->sort(ListOrdenada,est_compara_elementos_Estructura,orden);
+        }
+    }//fin if this!Null
+return ListOrdenada;
 }

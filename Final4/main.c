@@ -27,6 +27,8 @@ int main()
     ListaUsuarios=al_newArrayList();
     ArrayList* ListaFeed;
     ListaFeed=al_newArrayList();
+    ArrayList* ListaFeedOrdenada;
+    ListaFeedOrdenada=al_newArrayList();
 
     if(ListaMensajes !=NULL)
     {
@@ -49,6 +51,13 @@ int main()
                 if(ListaFeed !=NULL)
                 {
                  vista_MuestraElementos(ListaFeed,"LISTADO DE POPULARIDAD","ID_M\tMENSAJE\t\t\t\t\tLIKES\tID_USU\tNICK\t\tFOLLOWERS",vista_MuestraUnFEED,0,ListaFeed->len(ListaFeed),15);
+                }
+                break;
+            case 3:
+                ListaFeedOrdenada=ListarPorPopularidad(ListaFeed,0);
+                if(ListaFeedOrdenada !=NULL)
+                {
+                    vista_MuestraElementos(ListaFeedOrdenada,"LISTADO ORDENADO POR POPULARIDAD","ID_M\tMENSAJE\t\t\t\t\tLIKES\tID_USU\tNICK\t\tFOLLOWERS",vista_MuestraUnFEED,0,ListaFeedOrdenada->len(ListaFeedOrdenada),20);
                 }
                 break;
             case 0:

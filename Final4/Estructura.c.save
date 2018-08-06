@@ -148,21 +148,21 @@ long int est_get_largo(eMensajes* this)
 //****************************************************
 int est_compara_elementos_Estructura(void* pElementA,void* pElementB)
 {
-    int retorno=-0;
-    eFeed *tmp_1;
-    eFeed *tmp_2;
+    int retorno=-1;
+    eUsuario *tmp_1;
+    eMensajes *tmp_2;
     tmp_1=(eFeed* ) pElementA;
     tmp_2=(eFeed * ) pElementB;
 
-    if(tmp_1->popu_feed > tmp_2->popu_feed)
+    if(tmp_1->popu_usuario > tmp_2->id_usuario)
     {
         retorno=1;
     }
     else
     {
-        if(tmp_1->popu_feed < tmp_2->popu_feed)
+        if(tmp_1->id_usuario < tmp_2->id_usuario)
         {
-            retorno=-1;
+            retorno=0;
         }
     }
     return retorno;
