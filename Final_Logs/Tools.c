@@ -171,3 +171,81 @@ int tools_PedirEntero(char mensaje[])
     return ListAux;
 }
 */
+/*
+int gestion_buscarId(ArrayList* this, int cod)
+{
+    int retorno=0;
+    int i;
+    eEstructura* record;
+    if(this!=NULL && cod >0)
+    {
+        if(this->isEmpty(this)==0)
+       {
+        retorno=1;
+    //    if(record !=NULL)
+    //    {
+            for(i=0;i<this->len(this);i++)
+            {
+            record=this->get(this,i);
+            if(estruc_get_id(record)==cod)
+            {
+                retorno=i;
+                break;
+            }//fin if
+            else if(estruc_get_id(record)!=cod)
+            {
+                retorno=-1;
+            }
+            }//fin for
+//        }//fin if(record)
+        }
+    }//fin if(this!)
+    return retorno;
+}*/
+/*eEstructura* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor)
+{
+   int returnAux = -1;
+    ArrayList* aux;
+    int i=0;
+    eEstructura *record;
+
+    if(this!= NULL && pFunc!=NULL && (valor==0 || valor==1))//si es 1 busca maximo
+    {
+        if(aux!=NULL)
+        {
+            aux=(al_get(this,i));
+            for(i=1;i < al_len(this)-1;i++)
+            {
+                if(valor==1)
+                {
+                    if(pFunc(aux,al_get(this,i))==1)
+                    {
+                       record=aux;
+                       returnAux=0;
+                    }//fin if(pfunc)
+                    else
+                    {
+                        aux=al_get(this,i);
+                        record=aux;
+                    }
+                    }//fin if(valor)
+                if(valor==0)
+                {
+                    if(pFunc(aux,al_get(this,i))==-1)
+                    {
+                        record=aux;
+                      //  aux=al_get(this,i);
+                    }
+                else
+                {
+                 aux=al_get(this,i);
+                 record=aux;
+                }
+                returnAux=0;
+                }//fin if
+            }//fin 1er for
+          //  } //fin 2do for
+        }//fin 1er for
+    }
+    return record;
+}*/

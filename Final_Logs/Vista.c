@@ -15,16 +15,15 @@
 
 #define MASCARA_IMPRIMIRLOG "%s\t%s\t%d\t%d\t%s\n"
 #define MASCARA_IMPRIMIRSERV "%d\t%s\t%s\n"
-#define MASCARA_IMPRIMIRERR7 "%s;%s;%s;%s;%s\n"
-
+#define MASCARA_IMPRIMIRERR7 "%s\t%s\t%s\t%s\%s\n"
 #define MASCARA_IMPRIMIR3 "%d\t%.25s\t\t%d\t%d\t%s\t%d\n"
 
-void vista_ShowMenu(char *opcion)
+void vista_ShowMenu(char *opcion,char *titulo)
 {
     int op;
     system("cls");
     printf("\n\n");
-    printf("**********MENU PRINCIPAL**********\n\n");
+    printf("**********%s**********\n\n",titulo);
     printf("Ingrese una opcion: \n");
     printf("%s \n",opcion);
     printf("\n0.  Salir \n");

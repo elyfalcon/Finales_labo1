@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "ArrayList.h"
-//#include "Gestion.h"
+#include "Errores.h"
 #include "Tools.h"
 #include "Vista.h"
 #include "Logs.h"
@@ -149,7 +149,7 @@ int parserEstructuraService(FILE* pFile, ArrayList* this)
     }
     return retorno;
 }
-int GuardarArchivoT(ArrayList* this, const char* nombre)
+/*int GuardarArchivoT(ArrayList* this, const char* nombre)
 {
         int retorno=-1;
         int i;
@@ -185,6 +185,51 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
         if(retorno==1)
         {
             printf("Se creo el archivo %s correctamente\n",nombre);
+            system("pause");
+        }
+        else
+        {
+            printf("No se pudo crear el archivo %s\n",nombre);
+            system("pause");
+        }
+        return retorno;
+}*/
+
+int GuardarArchivoT(ArrayList* this, const char* nombre)
+{
+        int retorno=-1;
+        int i;
+        int cont=0;
+        int tamanio=0;
+        if(this!=NULL)
+        {
+            eErrores* record;
+            FILE *f;
+            f=fopen(nombre, "w");
+            if(f==NULL)
+            {
+                retorno=0;
+            }
+            else
+            {
+                if(record !=NULL)
+                {
+                    tamanio=al_len(this);
+                     fprintf(f,"FECHA;HORA;NOMBRE SERVICIO;MENSAJE ERROR;E-MAIL\n");
+                    for (i=0; i<tamanio; i++)
+                    {
+                    record = (void*)al_get(this, i);
+                    fprintf(f,MASCARA_GUARDAR_W,error_get_date(record),error_get_time(record),error_get_name(record),error_get_msg(record),error_get_email(record));
+                    retorno=1;
+                    cont++;
+                    }//fin for
+                    }//fin if(aux!=NULL)
+                fclose(f);
+            }//fin else
+        }// fin if(!=null)
+        if(retorno==1)
+        {
+            printf("Se creo el archivo %s correctamente con %d registros\n",nombre,cont);
             system("pause");
         }
         else

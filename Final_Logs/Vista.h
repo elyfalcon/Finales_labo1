@@ -10,7 +10,7 @@
  * \return
  *
  */
-void vista_ShowMenu(char *opcion);
+void vista_ShowMenu(char *opcion,char *titulo);
 
 /** \brief Imprime un titulo por pantalla
  *

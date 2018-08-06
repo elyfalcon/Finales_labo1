@@ -12,3 +12,5 @@ typedef struct
 }eLogEntry;
 
 #endif // LOGS_H_INCLUDED
+int comparaLog(void* eEmpleadoA,void* eEmpleadoB);
+int comparaLog_conValor(void* eEmpleadoA,int num);

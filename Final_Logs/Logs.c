@@ -139,3 +139,23 @@ int log_set_msg(eLogEntry* this, char* texto)
     return retorno;
 }
 //***********FIN SETTERS Y GETTERS********************
+int comparaLog(void* eEmpleadoA,void* eEmpleadoB)
+{
+ //   eEmpleado *eEmpleadoA;
+ //   eEmpleado *eEmpleadoB;
+    if(((eLogEntry*)eEmpleadoA)->serviceId > ((eLogEntry*)eEmpleadoB)->serviceId)
+    {
+        return 1;
+    }
+    if(((eLogEntry*)eEmpleadoA)->serviceId < ((eLogEntry*)eEmpleadoB)->serviceId)
+    {
+        return -1;
+    }
+    return 0;
+}
+int comparaLog_conValor(void* eEmpleadoA,int num)
+{
+   // eLogEntry *eEmpleadoA;
+    if(((eLogEntry*)eEmpleadoA)->serviceId ==num)
+        return 0;
+}

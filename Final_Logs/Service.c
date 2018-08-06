@@ -92,3 +92,67 @@ char* serv_get_email(eService* this)
     }
     return texto;
 }
+//**************************UNCIONES*************
+eService* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor)
+{
+   int returnAux = -1;
+    ArrayList* aux;
+    int i=0;
+    eService *record;
+
+    if(this!= NULL && pFunc!=NULL && (valor==0 || valor==1))//si es 1 busca maximo
+    {
+        if(aux!=NULL)
+        {
+            aux=(al_get(this,i));
+            for(i=1;i < al_len(this)-1;i++)
+            {
+                if(valor==1)
+                {
+                    if(pFunc(aux,al_get(this,i))==1)
+                    {
+                       record=aux;
+                       returnAux=0;
+                    }//fin if(pfunc)
+                    else
+                    {
+                        aux=al_get(this,i);
+                        record=aux;
+                    }
+                    }//fin if(valor)
+                if(valor==0)
+                {
+                    if(pFunc(aux,al_get(this,i))==-1)
+                    {
+                        record=aux;
+                      //  aux=al_get(this,i);
+                    }
+                else
+                {
+                 aux=al_get(this,i);
+                 record=aux;
+                }
+                returnAux=0;
+                }//fin if
+            }//fin 1er for
+          //  } //fin 2do for
+        }//fin 1er for
+    }
+    return record;
+}
+int comparaServicio(void* eEmpleadoA,void* eEmpleadoB)
+{
+ //   eEmpleado *eEmpleadoA;
+ //   eEmpleado *eEmpleadoB;
+    if(((eLogEntry*)eEmpleadoA)->serviceId > ((eLogEntry*)eEmpleadoB)->serviceId)
+    {
+        return 1;
+    }
+    if(((eLogEntry*)eEmpleadoA)->serviceId < ((eLogEntry*)eEmpleadoB)->serviceId)
+    {
+        return -1;
+    }
+    return 0;
+
+
+}

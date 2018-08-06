@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1533207593 source:c:\eli\utn\casa\final_logs\arraylist.c
+1533550679 source:c:\eli\utn\casa\final_logs\arraylist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 
-1533207593 c:\eli\utn\casa\final_logs\arraylist.h
+1533550679 c:\eli\utn\casa\final_logs\arraylist.h
 
-1533319308 source:c:\eli\utn\casa\final_logs\main.c
+1533568562 source:c:\eli\utn\casa\final_logs\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -15,28 +15,13 @@
 	"Archivo.h"
 	"Vista.h"
 	"Tools.h"
-
-1533312397 c:\eli\utn\casa\final_logs\archivo.h
-
-1533310773 source:c:\eli\utn\casa\final_logs\logs.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"ArrayList.h"
-	"Archivo.h"
-	"Logs.h"
+	"Errores.h"
 	"Service.h"
-	"Tools.h"
-	"Vista.h"
-
-1533300954 c:\eli\utn\casa\final_logs\logs.h
-
-1533300954 c:\eli\utn\casa\final_logs\service.h
-
-1533317329 c:\eli\utn\casa\final_logs\tools.h
 	"Logs.h"
 
-1533310749 source:c:\eli\utn\casa\final_logs\service.c
+1533550679 c:\eli\utn\casa\final_logs\archivo.h
+
+1533567940 source:c:\eli\utn\casa\final_logs\logs.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -47,7 +32,14 @@
 	"Tools.h"
 	"Vista.h"
 
-1533312200 source:c:\eli\utn\casa\final_logs\vista.c
+1533566709 c:\eli\utn\casa\final_logs\logs.h
+
+1533560681 c:\eli\utn\casa\final_logs\service.h
+
+1533550680 c:\eli\utn\casa\final_logs\tools.h
+	"Logs.h"
+
+1533561512 source:c:\eli\utn\casa\final_logs\service.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -56,20 +48,33 @@
 	"Logs.h"
 	"Service.h"
 	"Tools.h"
+	"Vista.h"
 
-1533312470 source:c:\eli\utn\casa\final_logs\archivo.c
+1533559036 source:c:\eli\utn\casa\final_logs\vista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
+	"Archivo.h"
+	"Logs.h"
+	"Service.h"
+	"Tools.h"
+	"Errores.h"
+
+1533554551 source:c:\eli\utn\casa\final_logs\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Errores.h"
 	"Tools.h"
 	"Vista.h"
 	"Logs.h"
 	"Service.h"
 
-1533310785 c:\eli\utn\casa\final_logs\vista.h
+1533559036 c:\eli\utn\casa\final_logs\vista.h
 
-1533318849 source:c:\eli\utn\casa\final_logs\tools.c
+1533560412 source:c:\eli\utn\casa\final_logs\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -79,7 +84,7 @@
 	"Logs.h"
 	"Service.h"
 
-1533319766 source:c:\eli\utn\casa\final_logs\gestion.c
+1533568533 source:c:\eli\utn\casa\final_logs\gestion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -89,8 +94,9 @@
 	"Vista.h"
 	"Logs.h"
 	"Service.h"
+	"Errores.h"
 
-1533314211 c:\eli\utn\casa\final_logs\gestion.h
+1533550680 c:\eli\utn\casa\final_logs\gestion.h
 
 1533428663 source:c:\eli\utn\finales\finales_labo1\final_logs\archivo.c
 	<stdio.h>
@@ -199,4 +205,16 @@
 	"Errores.h"
 
 1533511650 c:\eli\utn\finales\finales_labo1\final_logs\errores.h
+
+1533550675 source:c:\eli\utn\casa\final_logs\errores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Vista.h"
+	"Tools.h"
+	"Errores.h"
+
+1533550676 c:\eli\utn\casa\final_logs\errores.h
 

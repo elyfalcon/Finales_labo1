@@ -10,3 +10,6 @@ typedef struct
 }eService;
 
 #endif // SERVICE_H_INCLUDED
+
+eService* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
+int comparaServicio(void* eEmpleadoA,void* eEmpleadoB);
