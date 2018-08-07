@@ -62,9 +62,61 @@ char eLetra_getLetra(void * record)
     return tmp_1->letra;
 }
 
+int est_EsVocal(char Letra)
+{
+    int retorno=-1;
+    if(isalpha(Letra))
+    {
+        retorno=0;
+        Letra=toupper( Letra );
+        if(Letra=='A'||Letra=='E'||Letra=='I'||Letra=='O'||Letra=='U')
+        {
+            retorno=1;
+        }
+    }
+    return retorno;
+}
+ int gestion_ComparaLetra(void* eLetraA,void* eLetraB)
+{//-2 ERROR  y espues el standaroutput de strcmp
+    int retorno=-2;
+    eLetra *prd_1;
+    eLetra *prd_2;
+
+    if(eLetraA!=NULL && eLetraB!=NULL)
+    {
+        prd_1=(eLetra * ) eLetraA;
+        prd_2=(eLetra * ) eLetraB;
+        if(prd_1->letra == prd_2->letra)
+       // retorno=strcmp( prd_1->letra,prd_2->letra );
+       retorno=0;
+    }
+    return retorno;
+}
+
+int gestion_ComparaLetraConLeter(char letra,void* eLetraB)
+{
+    int retorno=-1;
+    eLetra *prd_1;
+
+    if(eLetraB!=NULL)
+    {
+        retorno=1;
+        prd_1=(eLetra * ) eLetraB;
+        if(letra == prd_1->letra)
+        {
+            retorno=0;
+        }
+    }
+    return retorno;
+}
 
 
+int letra_recorrePalabra(char *texto)
+{
+    int retorno;
 
+
+}
 /*
 
 //++++++++++++++++++++++++

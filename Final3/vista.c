@@ -3,6 +3,7 @@
 #include "Archivo.h"
 
 #include "ArrayList.h"
+#define MASCARA_IMPRIMIR "%c\t%s\t%d\t%d\n"
 
 
 void vista_ShowMenu(char *opcion)
@@ -21,113 +22,71 @@ void vista_ShowTitulo(char titulo[])
 {
     printf("%s----\n\n",titulo);
 }
-int vista_Muestra1UnElemento(void * prod)
+//**********************VISTAS DE IMPRESION***************************************
+int vista_Muestra1UnElemento(void * record)
 {
     int retorno=-1;
-    if(prod !=NULL)
+    if(record !=NULL)
     {
         retorno=0;
-     //   printf("%02d\t%15s\t\t%-20s\t\t\%-25s\t%s\n",prod_get_id(prod),prod_get_nombre(prod),prod->direccion,prod->localidad,prod->recibe); //definir una mascara
-       // printf("%d\t%s\t%d\n",prod_get_id(emp),/*emp->descrip*/prod_get_descripcion(emp),prod_get_cantidad(emp));
-
-    }
-    return retorno;
-}
-int vista_MuestraUnElementoLocalidad(void * prod)
-{
-    int retorno=-1;
-    int i;
-    void* local;
-    if(prod !=NULL)
-    {
-        retorno=0;
-      //  printf("%d\t%15s\n",local->id,prod->localidad);//,prod_get_nombre(prod),prod->direccion,,prod->recibe); //definir una mascara
-       // printf("%d\t%s\t%d\n",prod_get_id(emp),/*emp->descrip*/prod_get_descripcion(emp),prod_get_cantidad(emp));
-
+        printf(MASCARA_IMPRIMIR,letra_get_letra(record),letra_get_nombre(record),letra_get_vocal(record),letra_get_conson(record));
     }
     return retorno;
 }
 
-int vista_MuestraElementoLocalidad(void * local)
+int vista_MuestraElementos(ArrayList *this,char *Titulo,char *SubTitulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
 {
     int retorno=-1;
     int i;
-  //  eLocalidad* local;
-    if(local !=NULL)
+    int cont=0;
+    if(this!=NULL && Titulo!=NULL)
     {
-        retorno=0;
-//        printf("%d\t%15s\n",local->id,local->localidad);//,prod_get_nombre(prod),prod->direccion,,prod->recibe); //definir una mascara
-       // printf("%d\t%s\t%d\n",prod_get_id(emp),/*emp->descrip*/prod_get_descripcion(emp),prod_get_cantidad(emp));
-
-    }
-    return retorno;
-}
-
-void vista_MostrarElementos(ArrayList *this,char *Titulo,int desde, int hasta)
-{
-    int i;
-    int cont_lineas=0;
-   // if(this !=NULL && desde>=0 && hasta < this->len(this))
-   if(this !=NULL)
-    {
-        system("cls");
-        printf("\n\n--------%s--------\n\n",Titulo);
-        //printf("\nId Producto\tDireccion\tLocalidad\tRecibe\n\n");
-        vista_ShowTitulo("\nId\t Producto\t\t\tDireccion\\t\tLocalidad\tRecibe");
         if(this->isEmpty(this)==0)
-        {//No esta vacio
+        {
+        retorno=0;
+        system("cls");
+        printf("\n\n-------- %s --------\n",Titulo);
+        printf("\n%s\n");
+        printf("\n %s\n",SubTitulo);
+        if(this->isEmpty(this)==0)//No esta vacio
+        {
             for(i=desde;i<hasta;i++)
             {
-                vista_Muestra1UnElemento(al_get(this,i));
-                cont_lineas++;
-                if(cont_lineas==15)
+                if(cont!=0 && cont %paginado==0)
                 {
-                    system("pause");
-                   // cont_lineas=0;
+                   system("pause");
+                    system("cls");
                 }
-            }//fin for i
-        }
-      //  system("\npause");
+                pFunc(al_get(this,i)); //llama a la funcion que muestra 1 elemento
+                cont++;
+            }
+            if(cont!=0)
+            {//pausa la ultima tanda de elementos mostrados
+                printf("\n********************************************");
+                printf("*                                          *");
+                printf("*                                          *");
+                printf("\n\nSe procesaron: %d registros               *\n\n",cont);
+                printf("\n********************************************\n");
+                system("pause");
+            }
+        }//if(this->isEmpty(this)==0)
         else
-        {
-            printf("Lista vacia\n");
+        {//o con error o sin datos a mostrar
+            printf("\n Sin Datos a Motrar...\n");
             system("pause");
         }
-    }
-}
-void vista_MostrarElementosLocalidad(ArrayList *this,char *Titulo,int desde, int hasta)
-{
-    int i;
-    int cont_lineas=0;
-   // if(this !=NULL && desde>=0 && hasta < this->len(this))
-   if(this !=NULL)
-    {
-        system("cls");
-        printf("\n\n--------%s--------\n\n",Titulo);
-        //printf("\nId Producto\tDireccion\tLocalidad\tRecibe\n\n");
-        vista_ShowTitulo("\n----------Localidad");
-        if(this->isEmpty(this)==0)
-        {//No esta vacio
-            for(i=desde;i<hasta;i++)
-            {
-                vista_MuestraElementoLocalidad(al_get(this,i));
-                cont_lineas++;
-                if(cont_lineas==15)
-                {
-                    system("pause");
-                   // cont_lineas=0;
-                }
-            }//fin for i
-        }
-      //  system("\npause");
-        else
-        {
-            printf("Lista vacia\n");
-            system("pause");
-        }
-    }
+       }
+       else if(this->isEmpty !=0)
+       {
+           printf("Lista vacia\n");
+           system("pause");
+       }
+    }//if(this!=NULL && Titulo!=NULL)
+    return retorno;
 }
 
+
+//***********************************FIN VISTA IMPRESION****************************************************
 int al_MuestraElementos(ArrayList *this,char *Titulo,int (*pFunc)(void*) ,int desde,int hasta,int paginado)
 {
     int retorno=-1;

@@ -31,9 +31,33 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Archivo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Archivo.h" />
+		<Unit filename="ArrayList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ArrayList.h" />
+		<Unit filename="Gestioin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Gestion.h" />
+		<Unit filename="Letra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Letra.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="tools.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tools.h" />
+		<Unit filename="vista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="vista.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -135,10 +135,13 @@ ArrayList* gestion_Existen_Letras(ArrayList* this ,char * cadLetras)
                     cont++;
                   // ListAux->add(ListAux,aux); //agrego la letra
                   this->pop(this,j);// lo saco del ArrayList para agregarlo al Auxiliar
-                  ListAux->add(ListAux,aux); //agrego la letra
                     break;
                 }//fin if(cadLetras[i]==this->get(this,j))
-
+                else
+                {
+                    ListAux->add(this,aux); //agrego la letra
+                  //  break;
+                }
             }//fin for recorre ArrayList
         }//fin for recorre caracteres string
         if(strlen(cadLetras)==cont)

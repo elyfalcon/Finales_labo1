@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "ArrayList.h"
+#include "Letra.h"
 
 // funciones privadas
 int resizeUp(ArrayList* this);
@@ -729,4 +730,51 @@ ArrayList* al_filter(ArrayList* this ,int (*Pfunc)(void*))
         }
     }
     return ListaAux;
+}
+//*******************************
+
+ArrayList* gestion_Recorre_ArrayList(ArrayList *this,int (*pFunc)(void*))
+{
+    int retorno=-1;
+    int i;
+    int cant=0;
+    eLetra *aux;
+    ArrayList *ListAux;
+    if(this!=NULL )
+    {
+        retorno=-2;
+        ListAux=al_newArrayList();
+        if(this->isEmpty(this)==0)
+        {//No esta vacio
+            for(i=0; i<this->len(this);i++ )
+            {
+                aux=al_get(this,i);
+                retorno=pFunc(aux); //llamada a una funcion que se pasa por parametro
+                if(retorno==1)
+                {
+                    //ListFiltrada->pop(ListFiltrada,aux);
+                  //  aux=al_get(this,i);
+                  //  al_remove(ListFiltrada,i);
+
+                    cant++;
+
+                }//fin if(pFunc(al_get(this,i))==1)
+                else
+                {
+                    ListAux->add(ListAux,aux);
+                }
+
+              //   if(pFunc(al_get(this,i))==0 && aux->serviceId !=45)
+              //  {
+             //   GuardarArchivoT(this,NOM_ARCH_W);
+            //    }
+            }//for for(i=0; i<this->len(this) ; i++)
+        }//if(this->isEmpty(this)==0)
+    }//if(this!=NULL && Titulo!=NULL)
+    else
+    {
+        printf("Lista vacia\n");
+        system("pause");
+    }
+    return ListAux;
 }

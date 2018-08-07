@@ -10,6 +10,6 @@ typedef struct
     int consonante;
 }eLetra;
 
-
+int est_EsVocal(char Letra);
 
 #endif // LETRA_H_INCLUDED

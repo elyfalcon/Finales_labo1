@@ -62,3 +62,141 @@
 	<stdlib.h>
 	"Letra.h"
 
+1533661701 source:c:\eli\utn\casa\final3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Letra.h"
+	"Vista.h"
+	"Gestion.h"
+
+1533646918 c:\eli\utn\casa\final3\arraylist.h
+
+1533649536 c:\eli\utn\casa\final3\letra.h
+
+1533653472 source:c:\eli\utn\casa\final3\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Letra.h"
+	"Archivo.h"
+
+1533646918 c:\eli\utn\casa\final3\archivo.h
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533659585 source:c:\eli\utn\casa\final3\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Letra.h"
+
+1533646918 source:c:\eli\utn\casa\final3\tools.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+
+1533653929 source:c:\eli\utn\casa\final3\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"ArrayList.h"
+
+1533664059 source:c:\eli\utn\casa\final3\gestioin.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"ArrayList.h"
+	"vista.h"
+	"Letra.h"
+	"tools.h"
+
+1533646919 c:\eli\utn\casa\final3\vista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533646919 c:\eli\utn\casa\final3\tools.h
+	<string.h>
+
+1533659563 source:c:\eli\utn\casa\final3\letra.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Letra.h"
+
+1533653584 c:\eli\utn\casa\final3\gestion.h
+
+1533653474 source:c:\eli\utn\finales\finales_labo1\final3\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Letra.h"
+	"Archivo.h"
+
+1533646920 c:\eli\utn\finales\finales_labo1\final3\arraylist.h
+
+1533649538 c:\eli\utn\finales\finales_labo1\final3\letra.h
+
+1533646920 c:\eli\utn\finales\finales_labo1\final3\archivo.h
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533659586 source:c:\eli\utn\finales\finales_labo1\final3\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Letra.h"
+
+1533659564 source:c:\eli\utn\finales\finales_labo1\final3\letra.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Letra.h"
+
+1533677501 source:c:\eli\utn\finales\finales_labo1\final3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Letra.h"
+	"Vista.h"
+	"Gestion.h"
+
+1533646920 c:\eli\utn\finales\finales_labo1\final3\vista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533653586 c:\eli\utn\finales\finales_labo1\final3\gestion.h
+
+1533646920 source:c:\eli\utn\finales\finales_labo1\final3\tools.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+
+1533653930 source:c:\eli\utn\finales\finales_labo1\final3\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"ArrayList.h"
+
+1533676780 source:c:\eli\utn\finales\finales_labo1\final3\gestioin.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"ArrayList.h"
+	"vista.h"
+	"Letra.h"
+	"tools.h"
+
+1533646920 c:\eli\utn\finales\finales_labo1\final3\tools.h
+	<string.h>
+

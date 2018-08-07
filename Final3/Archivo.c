@@ -86,12 +86,10 @@ int parserEstructura(FILE* pFile, ArrayList* this)
                 printf("No hay memoria suficiente:\n");
                 system("pause");
                 break;
-
             }
         }
     }
     return retorno;
-
 }
 //***********Manejo de archivo
 /*
