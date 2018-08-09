@@ -1,0 +1,146 @@
+# depslib dependency file v1.0
+1533736309 source:c:\eli\utn\casa\final5\gestion.c
+
+1533749219 source:c:\eli\utn\casa\final5\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Temas.h"
+
+1533724581 c:\eli\utn\casa\final5\arraylist.h
+
+1533748622 c:\eli\utn\casa\final5\usuarios.h
+
+1533745613 c:\eli\utn\casa\final5\temas.h
+
+1533750165 source:c:\eli\utn\casa\final5\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"ArrayList.h"
+
+1533734725 c:\eli\utn\casa\final5\archivo.h
+
+1533749648 source:c:\eli\utn\casa\final5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Vista.h"
+	"Gestion.h"
+
+1533724582 c:\eli\utn\casa\final5\vista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533736317 c:\eli\utn\casa\final5\gestion.h
+
+1533746814 source:c:\eli\utn\casa\final5\temas.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Temas.h"
+	"Vista.h"
+	"Gestion.h"
+
+1533747688 source:c:\eli\utn\casa\final5\usuarios.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Vista.h"
+	"Gestion.h"
+	"Temas.h"
+
+1533747764 source:c:\eli\utn\casa\final5\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533724582 source:c:\eli\utn\casa\final5\tools.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+
+1533771935 source:c:\eli\utn\finales\finales_labo1\final5\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Temas.h"
+
+1533724582 c:\eli\utn\finales\finales_labo1\final5\arraylist.h
+
+1533768638 c:\eli\utn\finales\finales_labo1\final5\usuarios.h
+
+1533771619 c:\eli\utn\finales\finales_labo1\final5\temas.h
+
+1533747766 source:c:\eli\utn\finales\finales_labo1\final5\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1533736310 source:c:\eli\utn\finales\finales_labo1\final5\gestion.c
+
+1533771886 source:c:\eli\utn\finales\finales_labo1\final5\temas.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Temas.h"
+	"Vista.h"
+	"Gestion.h"
+	"Archivo.h"
+
+1533772097 c:\eli\utn\finales\finales_labo1\final5\vista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Temas.h"
+
+1533736318 c:\eli\utn\finales\finales_labo1\final5\gestion.h
+
+1533724584 source:c:\eli\utn\finales\finales_labo1\final5\tools.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+
+1533772054 c:\eli\utn\finales\finales_labo1\final5\archivo.h
+	"Archivo.h"
+	"ArrayList.h"
+
+1533768520 source:c:\eli\utn\finales\finales_labo1\final5\usuarios.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Vista.h"
+	"Gestion.h"
+	"Temas.h"
+
+1533773362 source:c:\eli\utn\finales\finales_labo1\final5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Usuarios.h"
+	"Temas.h"
+	"Vista.h"
+	"Gestion.h"
+	"Archivo.h"
+
+1533773083 source:c:\eli\utn\finales\finales_labo1\final5\vista.c
+	<stdio.h>
+	<stdlib.h>
+	"Archivo.h"
+	"Usuarios.h"
+	"Temas.h"
+	"ArrayList.h"
+

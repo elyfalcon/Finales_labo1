@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "ArrayList.h"
+#include "Usuarios.h"
+#include "Temas.h"
+#include "Vista.h"
+#include "Gestion.h"
+#include "Archivo.h"
+#define NOM_ARCH "usuarios.dat"
+#define NOM_ARCH1 "temas.dat"
+
+
+
+int main()
+{
+
+    int opcion;
+    char seguir='S';
+    ArrayList *ListaUsuarios;
+    ListaUsuarios=al_newArrayList();
+    ArrayList *ListaTemas;
+    ListaTemas=al_newArrayList();
+    ArrayList *ListaUsuOrdenada;
+    ListaUsuOrdenada=al_newArrayList();
+    ArrayList *ListaTemasOrdenado;
+    ListaTemasOrdenado=al_clone(ListaTemas);
+
+
+    if(ListaTemas !=NULL && ListaTemas !=NULL)
+    {
+     while(seguir=='S')
+     {
+        vista_ShowMenu("1: Listar Usuarios\n2: Listar Temas\n3: Escuchar un tema\n4: Guardar Estadistica\n5: Informar\n");
+        scanf("%d",&opcion);
+        ValidaMenu(opcion,0,4);
+          switch(opcion)
+            {
+            case 1:
+                cargarDesdeArchivo(ListaUsuarios,NOM_ARCH,parserEstructura);
+                ListaUsuOrdenada=al_sort(ListaUsuarios,usuario_ComparaNombre,1);
+                vista_MuestraElementos(ListaUsuarios,"LISTADO DE USUARIOS","ID\tNOMBRE\t\teMAIL\t\tSEXO\t\tPAIS\tPASS\tIP",vista_Muestra1UnElemento,0,ListaUsuarios->len(ListaUsuarios),20);
+              //  vista_MuestraElementos(ListaUsuOrdenada,"LISTADO DE USUARIOS","ID\tNOMBRE\t\teMAIL\t\tSEXO\t\tPAIS\tPASS\tIP",vista_Muestra1UnElemento,0,ListaUsuOrdenada->len(ListaUsuOrdenada),20);
+                break;
+            case 2:
+                cargarDesdeArchivo(ListaTemas,NOM_ARCH1,parserEstructuraTema);
+                al_sort(ListaTemasOrdenado,tema_ComparaNombre,1);
+                if(ListaTemasOrdenado !=NULL)
+                {
+                   vista_MuestraElementos(ListaTemasOrdenado,"LISTADO DE TEMAS","ID\tNOMBRE\t\tARTISTA",vista_Muestra1UnElementoTema,0,ListaTemasOrdenado->len(ListaTemasOrdenado),20);
+                }
+                else
+                {
+                    printf("LISTA VACIA \n");
+                    system("pause");
+                }
+
+                break;
+            case 0:
+                seguir='N';
+                break;
+            }
+     }//fin while(seguir=='S')
+    }// fin if(ListaTemas !=NULL && ListaTemas !=NULL)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}

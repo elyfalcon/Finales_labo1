@@ -1,0 +1,5 @@
+
+
+
+
+int cargarDesdeArchivo(ArrayList *this,const char* nombre,int (*pFunc)(void*,void*));
